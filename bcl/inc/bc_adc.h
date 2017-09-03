@@ -57,9 +57,37 @@ typedef enum
 typedef enum
 {
     //! @brief ADC event
-    BC_ADC_EVENT_DONE
+    BC_ADC_EVENT_DONE,
+
+    //! @brief ADC event
+    BC_ADC_EVENT_BURST_DONE
 
 } bc_adc_event_t;
+
+//! @brief ADC burst sample rate
+
+typedef enum
+{
+    //! @brief ADC burst sample rate is 20kHz
+    BC_ADC_BURST_SAMPLE_RATE_20KHZ,
+
+    //! @brief ADC burst sample rate is 10kHz
+    BC_ADC_BURST_SAMPLE_RATE_10KHZ
+
+} bc_adc_burst_sample_rate_t;
+
+
+//! @brief ADC burst sample type
+
+typedef enum
+{
+    //! @brief ADC burst sample type is uint8_t
+    BC_ADC_BURST_SAMPLE_TYPE_U8,
+
+    //! @brief ADC burst sample type is uint16_t
+    BC_ADC_BURST_SAMPLE_TYPE_U16
+
+} bc_adc_burst_sample_type_t;
 
 //! @brief Initialize ADC channel
 //! @param[in] channel ADC channel
@@ -109,6 +137,15 @@ bool bc_adc_async_read(bc_adc_channel_t channel);
 //! @param[out] result Pointer to destination where ADC conversion will be stored
 
 void bc_adc_get_result(bc_adc_channel_t channel, void *result);
+
+//! @brief Begins burst reading of the ADC channel
+//! @param[in] channel ADC channel
+//! @param[out] buffer Buffer to be filled with ADC data
+//! @param[in] lenght Desired lenght of ADC data
+//! @param[in] type Type of ADC data
+//! @param[in] rate Sample rate
+
+bool bc_adc_burst_read(bc_adc_channel_t channel, void *buffer, size_t length, bc_adc_burst_sample_type_t type, bc_adc_burst_sample_rate_t rate);
 
 //! @brief Get voltage on VDDA pin
 //! @param[out] vdda_voltage Pointer to destination where VDDA will be stored
