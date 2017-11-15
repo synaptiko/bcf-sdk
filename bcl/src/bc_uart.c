@@ -6,6 +6,15 @@
 
 typedef struct
 {
+    bool enabled;
+    bool planned;
+    char character;
+    unsigned int count;
+
+} bc_uart_watch_t;
+
+typedef struct
+{
     bool initialized;
     void (*event_handler)(bc_uart_channel_t, bc_uart_event_t, void *);
     void *event_param;
@@ -13,8 +22,10 @@ typedef struct
     bc_fifo_t *read_fifo;
     bc_scheduler_task_id_t async_write_task_id;
     bc_scheduler_task_id_t async_read_task_id;
+    bc_scheduler_task_id_t async_watch_task_id;
     bool async_write_in_progress;
     bool async_read_in_progress;
+    bc_uart_watch_t watch;
     bc_tick_t async_timeout;
     USART_TypeDef *usart;
 
@@ -39,6 +50,7 @@ static uint32_t _bc_uart_brr_t[] =
 
 static void _bc_uart_async_write_task(void *param);
 static void _bc_uart_async_read_task(void *param);
+static void _bc_uart_watch_task(void *param);
 static void _bc_uart_irq_handler(bc_uart_channel_t channel);
 
 void bc_uart_init(bc_uart_channel_t channel, bc_uart_baudrate_t baudrate, bc_uart_setting_t setting)
@@ -232,6 +244,8 @@ void bc_uart_init(bc_uart_channel_t channel, bc_uart_baudrate_t baudrate, bc_uar
     // Enable UART
     _bc_uart[channel].usart->CR1 |= USART_CR1_UE;
 
+    _bc_uart[channel].async_watch_task_id = bc_scheduler_register(_bc_uart_watch_task, (void *) channel, BC_TICK_INFINITY);
+
     _bc_uart[channel].initialized = true;
 }
 
@@ -375,6 +389,19 @@ size_t bc_uart_async_write(bc_uart_channel_t channel, const void *buffer, size_t
     return bytes_written;
 }
 
+void bc_uart_async_read_watch_init(bc_uart_channel_t channel, char character, bool enable)
+{
+    bc_irq_disable();
+
+    _bc_uart[channel].watch.enabled = enable;
+    _bc_uart[channel].watch.count = 0;
+    _bc_uart[channel].watch.character = character;
+
+    bc_fifo_purge(_bc_uart[channel].read_fifo);
+
+    bc_irq_enable();
+}
+
 bool bc_uart_async_read_start(bc_uart_channel_t channel, bc_tick_t timeout)
 {
     if (!_bc_uart[channel].initialized || _bc_uart[channel].read_fifo == NULL || _bc_uart[channel].async_read_in_progress)
@@ -427,6 +454,19 @@ bool bc_uart_async_read_cancel(bc_uart_channel_t channel)
     bc_scheduler_unregister(_bc_uart[channel].async_read_task_id);
 
     return false;
+}
+
+unsigned int bc_uart_async_read_watch_get_count(bc_uart_channel_t channel)
+{
+    bc_irq_disable();
+
+    unsigned int c = _bc_uart[channel].watch.count;
+
+    _bc_uart[channel].watch.count = 0;
+
+    bc_irq_enable();
+
+    return c;
 }
 
 size_t bc_uart_async_read(bc_uart_channel_t channel, void *buffer, size_t length)
@@ -485,6 +525,30 @@ static void _bc_uart_async_read_task(void *param)
     }
 }
 
+static void _bc_uart_watch_task(void *param)
+{
+    bc_uart_channel_t channel = (bc_uart_channel_t) param;
+    bc_uart_t *uart = &_bc_uart[channel];
+
+    if (uart->event_handler != NULL)
+    {
+        uart->event_handler(channel, BC_UART_EVENT_ASYNC_READ_WATCH, &uart->event_param);
+
+        bc_irq_disable();
+
+        if (uart->watch.count != 0)
+        {
+            bc_scheduler_plan_current_now();
+        }
+        else
+        {
+            uart->watch.planned = false;
+        }
+
+        bc_irq_enable();
+    }
+}
+
 static void _bc_uart_irq_handler(bc_uart_channel_t channel)
 {
     USART_TypeDef *usart = _bc_uart[channel].usart;
@@ -526,7 +590,23 @@ static void _bc_uart_irq_handler(bc_uart_channel_t channel)
         // Read receive data register
         character = usart->RDR;
 
+        // TODO handle overrun
         bc_fifo_irq_write(_bc_uart[channel].read_fifo, &character, 1);
+
+        if (_bc_uart[channel].watch.enabled)
+        {
+            if (character == _bc_uart[channel].watch.character)
+            {
+                _bc_uart[channel].watch.count++;
+
+                if (!_bc_uart[channel].watch.planned)
+                {
+                    bc_scheduler_plan_now(_bc_uart[channel].async_watch_task_id);
+
+                    _bc_uart[channel].watch.planned = true;
+                }
+            }
+        }
 
         bc_scheduler_plan_now(_bc_uart[channel].async_read_task_id);
     }

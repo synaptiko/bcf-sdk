@@ -133,7 +133,10 @@ typedef enum
     BC_UART_EVENT_ASYNC_READ_DATA = 1,
 
     //! @brief Event is timeout
-    BC_UART_EVENT_ASYNC_READ_TIMEOUT = 2
+    BC_UART_EVENT_ASYNC_READ_TIMEOUT = 2,
+
+    //! @brief Event is end received
+    BC_UART_EVENT_ASYNC_READ_WATCH = 3
 
 } bc_uart_event_t;
 
@@ -182,6 +185,10 @@ void bc_uart_set_async_fifo(bc_uart_channel_t channel, bc_fifo_t *write_fifo, bc
 
 size_t bc_uart_async_write(bc_uart_channel_t channel, const void *buffer, size_t length);
 
+// TODO doc
+
+void bc_uart_async_read_watch_init(bc_uart_channel_t channel, char character, bool enable);
+
 //! @brief Start async reading
 //! @param[in] channel UART channel
 //! @param[in] timeout Maximum timeout in ms
@@ -196,6 +203,10 @@ bool bc_uart_async_read_start(bc_uart_channel_t channel, bc_tick_t timeout);
 //! @return false On failure
 
 bool bc_uart_async_read_cancel(bc_uart_channel_t channel);
+
+// TODO doc
+
+unsigned int bc_uart_async_read_watch_get_count(bc_uart_channel_t channel);
 
 //! @brief Get data that has been received in async mode
 //! @param[in] channel UART channel
