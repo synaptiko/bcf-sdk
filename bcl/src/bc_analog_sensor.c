@@ -6,18 +6,17 @@ static void _bc_analog_sensor_task_measure(void *param);
 
 static void _bc_analog_sensor_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_t event, void *param);
 
-void bc_analog_sensor_init(bc_analog_sensor_t *self, bc_adc_channel_t adc_channel, bc_adc_format_t adc_format, const bc_analog_sensor_driver_t *driver)
+void bc_analog_sensor_init(bc_analog_sensor_t *self, bc_adc_channel_t adc_channel, const bc_analog_sensor_driver_t *driver)
 {
     memset(self, 0, sizeof(*self));
 
     self->_adc_channel = adc_channel;
-    self->_adc_format = adc_format;
     self->_driver = driver;
 
     self->_task_id_interval = bc_scheduler_register(_bc_analog_sensor_task_interval, self, BC_TICK_INFINITY);
     self->_task_id_measure = bc_scheduler_register(_bc_analog_sensor_task_measure, self, BC_TICK_INFINITY);
 
-    bc_adc_init(self->_adc_channel, self->_adc_format);
+    bc_adc_init(self->_adc_channel);
     bc_adc_set_event_handler(self->_adc_channel, _bc_analog_sensor_adc_event_handler, self);
 
     if (self->_driver != NULL && self->_driver->init != NULL)
@@ -62,14 +61,41 @@ bool bc_analog_sensor_measure(bc_analog_sensor_t *self)
     return true;
 }
 
-bool bc_analog_sensor_get_result(bc_analog_sensor_t *self, void *result)
+bool bc_analog_sensor_get_result_8b(bc_analog_sensor_t *self, uint8_t *result)
 {
     if (self->_state != BC_ANALOG_SENSOR_STATE_UPDATE)
     {
         return false;
     }
 
-    return bc_adc_get_result(self->_adc_channel, result);
+    *result = self->result << 8;
+
+    return true;
+}
+
+bool bc_analog_sensor_get_result_16b(bc_analog_sensor_t *self, uint16_t *result)
+{
+    if (self->_state != BC_ANALOG_SENSOR_STATE_UPDATE)
+    {
+        return false;
+    }
+
+    *result = self->result;
+
+    return true;
+}
+
+bool bc_analog_sensor_get_result_voltage(bc_analog_sensor_t *self, float *result)
+{
+    if (self->_state != BC_ANALOG_SENSOR_STATE_UPDATE)
+    {
+        return false;
+    }
+
+    // TODU update formula
+    *result = self->result;
+
+    return true;
 }
 
 static void _bc_analog_sensor_task_interval(void *param)
@@ -122,7 +148,7 @@ start:
         }
         case BC_ANALOG_SENSOR_STATE_MEASURE:
         {
-            if (!bc_adc_read(self->_adc_channel, NULL))
+            if (!bc_adc_read_16b(self->_adc_channel, &self->result))
             {
                 self->_state = BC_ANALOG_SENSOR_STATE_ERROR;
 

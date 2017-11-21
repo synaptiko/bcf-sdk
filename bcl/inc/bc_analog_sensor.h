@@ -57,10 +57,10 @@ typedef enum
 struct bc_analog_sensor_t
 {
     bc_adc_channel_t _adc_channel;
-    bc_adc_format_t _adc_format;
     const bc_analog_sensor_driver_t *_driver;
     bc_scheduler_task_id_t _task_id_interval;
     bc_scheduler_task_id_t _task_id_measure;
+    uint16_t result;
     void (*_event_handler)(bc_analog_sensor_t *, bc_analog_sensor_event_t, void *);
     void *_event_param;
     bool _measurement_active;
@@ -73,10 +73,9 @@ struct bc_analog_sensor_t
 //! @brief Initialize generic analog sensor
 //! @param[in] self Instance
 //! @param[in] adc_channel ADC channel
-//! @param[in] adc_format ADC result format
 //! @param[in] driver Optional driver interface (can be NULL)
 
-void bc_analog_sensor_init(bc_analog_sensor_t *self, bc_adc_channel_t adc_channel, bc_adc_format_t adc_format, const bc_analog_sensor_driver_t *driver);
+void bc_analog_sensor_init(bc_analog_sensor_t *self, bc_adc_channel_t adc_channel, const bc_analog_sensor_driver_t *driver);
 
 //! @brief Set callback function
 //! @param[in] self Instance
@@ -104,7 +103,23 @@ bool bc_analog_sensor_measure(bc_analog_sensor_t *self);
 //! @return true When value is valid
 //! @return false When value is invalid
 
-bool bc_analog_sensor_get_result(bc_analog_sensor_t *self, void *result);
+bool bc_analog_sensor_get_result_8b(bc_analog_sensor_t *self, uint8_t *result);
+
+//! @brief Get measurement result
+//! @param[in] self Instance
+//! @param[out] result Pointer to variable where result will be stored
+//! @return true When value is valid
+//! @return false When value is invalid
+
+bool bc_analog_sensor_get_result_16b(bc_analog_sensor_t *self, uint16_t *result);
+
+//! @brief Get measurement result
+//! @param[in] self Instance
+//! @param[out] result Pointer to variable where result will be stored
+//! @return true When value is valid
+//! @return false When value is invalid
+
+bool bc_analog_sensor_get_result_voltage(bc_analog_sensor_t *self, float *result);
 
 //! @}
 

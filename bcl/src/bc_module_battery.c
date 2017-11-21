@@ -33,9 +33,8 @@ static struct
 } _bc_module_battery;
 
 static void _bc_module_battery_task();
-static void _bc_module_battery_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_t event, void *param);
+
 static void _bc_module_battery_measurement(int state);
-static void _bc_module_battery_update_voltage_on_battery(void);
 
 void bc_module_battery_init(bc_module_battery_format_t format)
 {
@@ -62,9 +61,8 @@ void bc_module_battery_init(bc_module_battery_format_t format)
     bc_gpio_set_mode(BC_GPIO_P1, BC_GPIO_MODE_OUTPUT);
 
     // Initialize ADC channel
-    bc_adc_init(BC_ADC_CHANNEL_A0, BC_ADC_FORMAT_FLOAT);
-    bc_adc_read(BC_ADC_CHANNEL_A0, &temp); // the first measurement is inaccurate
-    bc_adc_set_event_handler(BC_ADC_CHANNEL_A0, _bc_module_battery_adc_event_handler, NULL);
+    bc_adc_init(BC_ADC_CHANNEL_A0);
+    bc_adc_read_voltage(BC_ADC_CHANNEL_A0, &temp);
 }
 
 void bc_module_battery_set_event_handler(void (*event_handler)(bc_module_battery_event_t, void *), void *event_param)
@@ -106,7 +104,12 @@ bool bc_module_battery_measure(void)
 
     _bc_module_battery_measurement(ENABLE);
 
-    bc_adc_async_read(BC_ADC_CHANNEL_A0);
+    if (bc_adc_read_voltage(BC_ADC_CHANNEL_A0, &_bc_module_battery.voltage))
+    {
+        _bc_module_battery.valid = true;
+    }
+
+    _bc_module_battery.measurement_active = false;
 
     return true;
 }
@@ -161,40 +164,30 @@ static void _bc_module_battery_task(void *param)
     // Lock measurement
     _bc_module_battery.measurement_active = true;
 
-    bc_adc_async_read(BC_ADC_CHANNEL_A0);
-}
-
-static void _bc_module_battery_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_t event, void *param)
-{
-    (void) channel;
-    (void) param;
-
-    if (event == BC_ADC_EVENT_DONE)
+    if (bc_adc_read_voltage(BC_ADC_CHANNEL_A0, &_bc_module_battery.voltage))
     {
-        _bc_module_battery_update_voltage_on_battery();
-
-        _bc_module_battery_measurement(DISABLE);
-
-        if (_bc_module_battery.valid && _bc_module_battery.event_handler != NULL)
-        {
-            // Notify event based on calculated percentage
-            if (_bc_module_battery.voltage <= _bc_module_battery.level_critical_threshold)
-            {
-                _bc_module_battery.event_handler(BC_MODULE_BATTERY_EVENT_LEVEL_CRITICAL, _bc_module_battery.event_param);
-            }
-            else if (_bc_module_battery.voltage <= _bc_module_battery.level_low_threshold)
-            {
-                _bc_module_battery.event_handler(BC_MODULE_BATTERY_EVENT_LEVEL_LOW, _bc_module_battery.event_param);
-            }
-            else
-            {
-                _bc_module_battery.event_handler(BC_MODULE_BATTERY_EVENT_UPDATE, _bc_module_battery.event_param);
-            }
-        }
+        _bc_module_battery.valid = true;
     }
 
     // Unlock measurement
     _bc_module_battery.measurement_active = false;
+
+    if (_bc_module_battery.valid && _bc_module_battery.event_handler != NULL)
+    {
+        // Notify event based on calculated percentage
+        if (_bc_module_battery.voltage <= _bc_module_battery.level_critical_threshold)
+        {
+            _bc_module_battery.event_handler(BC_MODULE_BATTERY_EVENT_LEVEL_CRITICAL, _bc_module_battery.event_param);
+        }
+        else if (_bc_module_battery.voltage <= _bc_module_battery.level_low_threshold)
+        {
+            _bc_module_battery.event_handler(BC_MODULE_BATTERY_EVENT_LEVEL_LOW, _bc_module_battery.event_param);
+        }
+        else
+        {
+            _bc_module_battery.event_handler(BC_MODULE_BATTERY_EVENT_UPDATE, _bc_module_battery.event_param);
+        }
+    }
 }
 
 static void _bc_module_battery_measurement(int state)
@@ -206,26 +199,5 @@ static void _bc_module_battery_measurement(int state)
     else
     {
         bc_gpio_set_output(BC_GPIO_P1, state);
-    }
-}
-
-static void _bc_module_battery_update_voltage_on_battery(void)
-{
-    float v;
-
-    _bc_module_battery.valid = bc_adc_get_result(BC_ADC_CHANNEL_A0, &v);
-
-    if (!_bc_module_battery.valid)
-    {
-        return;
-    }
-
-    if (_bc_module_battery.format == BC_MODULE_BATTERY_FORMAT_MINI)
-    {
-        _bc_module_battery.voltage = _BC_MODULE_BATTERY_MINI_RESULT_TO_VOLTAGE(v);
-    }
-    else
-    {
-        _bc_module_battery.voltage = _BC_MODULE_BATTERY_STANDARD_RESULT_TO_VOLTAGE(v);
     }
 }

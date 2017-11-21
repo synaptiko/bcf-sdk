@@ -27,30 +27,12 @@ typedef enum
     BC_ADC_CHANNEL_A4 = 4,
 
     //! @brief ADC channel A5
-    BC_ADC_CHANNEL_A5 = 5
+    BC_ADC_CHANNEL_A5 = 5,
+
+    //! @brief ADC channel VDDA
+    BC_ADC_CHANNEL_VDDA = 6 // TODO add to tables
 
 } bc_adc_channel_t;
-
-//! @brief ADC result format
-
-typedef enum
-{
-    //! @brief ADC result format is 8-bit
-    BC_ADC_FORMAT_8_BIT  = 0,
-
-    //! @brief ADC result format is 16-bit
-    BC_ADC_FORMAT_16_BIT = 1,
-
-    //! @brief ADC result format is 24-bit
-    BC_ADC_FORMAT_24_BIT = 2,
-
-    //! @brief ADC result format is 32-bit
-    BC_ADC_FORMAT_32_BIT = 3,
-
-    //! @brief ADC result format is float
-    BC_ADC_FORMAT_FLOAT = 4
-
-} bc_adc_format_t;
 
 //! @brief ADC event
 
@@ -61,23 +43,50 @@ typedef enum
 
 } bc_adc_event_t;
 
+//! @brief ADC burst sample rate
+
+typedef enum
+{
+    //! @brief ADC burst sample rate is 20kHz
+    BC_ADC_BURST_SAMPLE_RATE_20KHZ,
+
+    //! @brief ADC burst sample rate is 10kHz
+    BC_ADC_BURST_SAMPLE_RATE_10KHZ
+
+} bc_adc_burst_sample_rate_t;
+
+//! @brief ADC burst sample type
+
+typedef enum
+{
+    //! @brief ADC burst sample type is uint8_t
+    BC_ADC_BURST_SAMPLE_TYPE_U8,
+
+    //! @brief ADC burst sample type is uint16_t
+    BC_ADC_BURST_SAMPLE_TYPE_U16
+
+} bc_adc_burst_sample_type_t;
+
 //! @brief Initialize ADC channel
 //! @param[in] channel ADC channel
-//! @param[in] format ADC result format
 
-void bc_adc_init(bc_adc_channel_t channel, bc_adc_format_t format);
+void bc_adc_init(bc_adc_channel_t channel);
 
-//! @brief Set ADC result format
+//! @brief Reads the ADC channel
 //! @param[in] channel ADC channel
-//! @param[in] format ADC result format
+//! @param[out] result Pointer to destination where ADC conversion will be stored
+//! @return true On success
+//! @return false On failure
 
-void bc_adc_set_format(bc_adc_channel_t channel, bc_adc_format_t format);
+bool bc_adc_read_8b(bc_adc_channel_t channel, uint8_t *result);
 
-//! @brief Get ADC result format
+//! @brief Reads the ADC channel
 //! @param[in] channel ADC channel
-//! @return ADC result format
+//! @param[out] result Pointer to destination where ADC conversion will be stored
+//! @return true On success
+//! @return false On failure
 
-bc_adc_format_t bc_adc_get_format(bc_adc_channel_t channel);
+bool bc_adc_read_16b(bc_adc_channel_t channel, uint16_t *result);
 
 //! @brief Reads the ADC channel voltage
 //! @param[in] channel ADC channel
@@ -85,7 +94,7 @@ bc_adc_format_t bc_adc_get_format(bc_adc_channel_t channel);
 //! @return true On success
 //! @return false On failure
 
-bool bc_adc_read(bc_adc_channel_t channel, void *result);
+bool bc_adc_read_voltage(bc_adc_channel_t channel, float *result);
 
 //! @brief Set callback function
 //! @param[in] channel ADC channel
@@ -96,27 +105,14 @@ bool bc_adc_read(bc_adc_channel_t channel, void *result);
 
 bool bc_adc_set_event_handler(bc_adc_channel_t channel, void (*event_handler)(bc_adc_channel_t, bc_adc_event_t, void *), void *event_param);
 
-//! @brief Begins reading the ADC channel voltage in asynchronous mode
+//! @brief Begins burst reading of the ADC channel
 //! @param[in] channel ADC channel
-//! @return true On success
-//! @return false On failure
+//! @param[out] buffer Buffer to be filled with ADC data
+//! @param[in] lenght Desired lenght of ADC data
+//! @param[in] type Type of ADC data
+//! @param[in] rate Sample rate
 
-bool bc_adc_async_read(bc_adc_channel_t channel);
-
-//! @brief Get measurement result
-//! @param[in] channel ADC channel
-//! @param[out] result Pointer to variable where result will be stored
-//! @return true On success
-//! @return false On failure
-
-bool bc_adc_get_result(bc_adc_channel_t channel, void *result);
-
-//! @brief Get voltage on VDDA pin
-//! @param[out] vdda_voltage Pointer to destination where VDDA will be stored
-//! @return true On valid VDDA
-//! @return false On valid VDDA
-
-bool bc_adc_get_vdda_voltage(float *vdda_voltage);
+bool bc_adc_burst_read(bc_adc_channel_t channel, void *buffer, size_t length, bc_adc_burst_sample_type_t type, bc_adc_burst_sample_rate_t rate);
 
 //! @}
 

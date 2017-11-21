@@ -54,7 +54,7 @@ bool bc_cp201t_init(bc_module_sensor_channel_t channel)
         }
 
         // Initialize ADC to measure voltage on CP-201T (temperature)
-        bc_adc_init(cp201t->channel_adc, BC_ADC_FORMAT_16_BIT);
+        bc_adc_init(cp201t->channel_adc);
         bc_adc_set_event_handler(cp201t->channel_adc, _bc_cp201t_adc_event_handler, cp201t);
 
         cp201t->task_id_interval = bc_scheduler_register(_bc_cp201t_task_interval, cp201t, BC_TICK_INFINITY);
@@ -112,7 +112,7 @@ bool bc_cp201t_get_temperature_celsius(bc_module_sensor_channel_t channel, float
     uint16_t data = cp201t->thermistor_data;
 
     // Get actual VDDA and accurate data
-    bc_adc_get_vdda_voltage(&vdda_voltage);
+    // TODO update flow bc_adc_get_vdda_voltage(&vdda_voltage);
     data *= 3.3f / vdda_voltage;
 
     // Software shuffle of pull-up and NTC with each other (So that the table can be used)
@@ -152,7 +152,8 @@ static void _bc_cp201t_task_measure(void *param)
     bc_module_sensor_set_pull(cp201t->channel, BC_MODULE_SENSOR_PULL_UP_4K7);
 
     // Start another reading
-    bc_adc_async_read(cp201t->channel_adc);
+
+    // TODO bc_adc_async_read(cp201t->channel_adc);
 }
 
 static void _bc_cp201t_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_t event, void *param)
@@ -168,7 +169,7 @@ static void _bc_cp201t_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_
         // Disconnect pull-up
         bc_module_sensor_set_pull(cp201t->channel, BC_MODULE_SENSOR_PULL_NONE);
 
-        bc_adc_get_result(cp201t->channel_adc, &cp201t->thermistor_data);
+        // TODO bc_adc_get_result(cp201t->channel_adc, &cp201t->thermistor_data);
 
         cp201t->event_handler(cp201t->channel, BC_CP201T_EVENT_UPDATE, cp201t->event_param);
     }
