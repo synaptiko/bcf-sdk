@@ -12,26 +12,8 @@
 
 typedef struct
 {
-    bool single;
-    bool burst;
-
-} bc_adc_pending_t;
-
-typedef struct
-{
-    void *buffer;
-    size_t lenght;
-    bc_adc_burst_sample_type_t type;
-    bc_adc_burst_sample_rate_t rate;
-
-} bc_adc_burst_t;
-
-typedef struct
-{
     void (*event_handler)(bc_adc_channel_t, bc_adc_event_t, void *);
     void *event_param;
-    bc_adc_pending_t pending;
-    bc_adc_burst_t burst;
     uint32_t chselr;
 
 } bc_adc_channel_config_t;
@@ -41,8 +23,6 @@ static struct
     bool initialized;
     bc_adc_channel_t channel_in_progress;
     uint16_t vrefint;
-    float real_vdda_voltage;
-    bc_fifo_t fifo_pending;
     bc_scheduler_task_id_t task_id;
     bc_adc_channel_config_t channel_table[8];
 }
@@ -63,8 +43,6 @@ _bc_adc =
         {
             NULL,
             NULL,
-            { 0 },
-            { 0 },
             ADC_CHSELR_CHSEL17
         }
     }
@@ -83,6 +61,8 @@ static const uint32_t _bc_adc_ccr_table[2] =
 };
 
 static void _bc_adc_task(void *param);
+
+static bool _bc_adc_measure_channel(const bc_adc_channel_t channel);
 
 static inline void _bc_adc_calibration(void);
 
@@ -104,8 +84,8 @@ void bc_adc_init(bc_adc_channel_t channel)
         // Enable Over-sampler with ratio (16x) and set PCLK/2 as a clock source
         ADC1->CFGR2 = ADC_CFGR2_OVSE | ADC_CFGR2_OVSR_1 | ADC_CFGR2_OVSR_0 | ADC_CFGR2_CKMODE_0;
 
-        // Sampling time selection (12.5 cycles)
-        ADC1->SMPR |= ADC_SMPR_SMP_1 | ADC_SMPR_SMP_0;
+        // Sampling time selection (3.5 cycles)
+        ADC1->SMPR |= ADC_SMPR_SMP_0;
 
         // Enable ADC voltage regulator
         ADC1->CR |= ADC_CR_ADVREGEN;
@@ -142,28 +122,9 @@ void bc_adc_init(bc_adc_channel_t channel)
 
 bool bc_adc_read_8b(bc_adc_channel_t channel, uint8_t *result)
 {
-    // If ongoing conversion...
-    if (_bc_adc.channel_in_progress != BC_ADC_CHANNEL_NONE)
+    if (!_bc_adc_measure_channel(channel))
     {
         return false;
-    }
-
-    // Set ADC channel
-    ADC1->CHSELR = _bc_adc.channel_table[channel].chselr;
-
-    // Disable all ADC interrupts
-    ADC1->IER = 0;
-
-    // Clear EOS flag (it is cleared by software writing 1 to it)
-    ADC1->ISR = ADC_ISR_EOS;
-
-    // Start the AD measurement
-    ADC1->CR |= ADC_CR_ADSTART;
-
-    // wait for end of measurement
-    while ((ADC1->ISR & ADC_ISR_EOS) == 0)
-    {
-        continue;
     }
 
     if (result != NULL)
@@ -176,28 +137,9 @@ bool bc_adc_read_8b(bc_adc_channel_t channel, uint8_t *result)
 
 bool bc_adc_read_16b(bc_adc_channel_t channel, uint16_t *result)
 {
-    // If ongoing conversion...
-    if (_bc_adc.channel_in_progress != BC_ADC_CHANNEL_NONE)
+    if (!_bc_adc_measure_channel(channel))
     {
         return false;
-    }
-
-    // Set ADC channel
-    ADC1->CHSELR = _bc_adc.channel_table[channel].chselr;
-
-    // Disable all ADC interrupts
-    ADC1->IER = 0;
-
-    // Clear EOS flag (it is cleared by software writing 1 to it)
-    ADC1->ISR = ADC_ISR_EOS;
-
-    // Start the AD measurement
-    ADC1->CR |= ADC_CR_ADSTART;
-
-    // wait for end of measurement
-    while ((ADC1->ISR & ADC_ISR_EOS) == 0)
-    {
-        continue;
     }
 
     if (result != NULL)
@@ -210,61 +152,42 @@ bool bc_adc_read_16b(bc_adc_channel_t channel, uint16_t *result)
 
 bool bc_adc_read_voltage(bc_adc_channel_t channel, float *result)
 {
-    float voltage_real;
+    float vdda;
 
-    // If ongoing conversion...
-    if (_bc_adc.channel_in_progress != BC_ADC_CHANNEL_NONE)
-    {
-        return false;
-    }
     // Enable internal reference
     ADC->CCR |= ADC_CCR_VREFEN;
 
-    // Set ADC channel
-    ADC1->CHSELR = _bc_adc.channel_table[BC_ADC_CHANNEL_INTERNAL_REFERENCE].chselr;
-
-    // Disable all ADC interrupts
-    ADC1->IER = 0;
-
-    // Clear EOS flag (it is cleared by software writing 1 to it)
-    ADC1->ISR = ADC_ISR_EOS;
-
-    // Start the AD measurement
-    ADC1->CR |= ADC_CR_ADSTART;
-
-    // wait for end of measurement
-    while ((ADC1->ISR & ADC_ISR_EOS) == 0)
+    if (!_bc_adc_measure_channel(BC_ADC_CHANNEL_INTERNAL_REFERENCE))
     {
-        continue;
+        // Enable internal reference
+        ADC->CCR &= ~ADC_CCR_VREFEN;
+
+        return false;
     }
 
     // Enable internal reference
     ADC->CCR &= ~ADC_CCR_VREFEN;
 
     // Compute actual VDDA
-    voltage_real = 3.f * ((float) _bc_adc.vrefint / (float) ADC1->DR);
+    vdda = 3.f * ((float) _bc_adc.vrefint / (float) ADC1->DR);
 
-    // Set ADC channel
-    ADC1->CHSELR = _bc_adc.channel_table[channel].chselr;
-
-    // Disable all ADC interrupts
-    ADC1->IER = 0;
-
-    // Clear EOS flag (it is cleared by software writing 1 to it)
-    ADC1->ISR = ADC_ISR_EOS;
-
-    // Start the AD measurement
-    ADC1->CR |= ADC_CR_ADSTART;
-
-    // wait for end of measurement
-    while ((ADC1->ISR & ADC_ISR_EOS) == 0)
+    if (channel != BC_ADC_CHANNEL_VDDA)
     {
-        continue;
+        if (_bc_adc_measure_channel(channel))
+        {
+            if (result != NULL)
+            {
+                *(float *) result = ADC1->DR * (vdda / 65536.f);
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
-
-    if (result != NULL)
+    else
     {
-        *(float *) result = ADC1->DR * (voltage_real / 65536.f);
+        *result = vdda;
     }
 
     return true;
@@ -349,6 +272,35 @@ static void _bc_adc_task(void *param)
 
     // Perform event call-back
     adc->event_handler(pending_result_channel, BC_ADC_EVENT_DONE, adc->event_param);
+}
+
+static bool _bc_adc_measure_channel(const bc_adc_channel_t channel)
+{
+    // If ongoing conversion...
+    if (_bc_adc.channel_in_progress != BC_ADC_CHANNEL_NONE)
+    {
+        return false;
+    }
+
+    // Set ADC channel
+    ADC1->CHSELR = _bc_adc.channel_table[channel].chselr;
+
+    // Disable all ADC interrupts
+    ADC1->IER = 0;
+
+    // Clear EOS flag (it is cleared by software writing 1 to it)
+    ADC1->ISR = ADC_ISR_EOS;
+
+    // Start the AD measurement
+    ADC1->CR |= ADC_CR_ADSTART;
+
+    // wait for end of measurement
+    while ((ADC1->ISR & ADC_ISR_EOS) == 0)
+    {
+        continue;
+    }
+
+    return true;
 }
 
 static inline void _bc_adc_calibration(void)

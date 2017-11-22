@@ -30,7 +30,7 @@ typedef enum
     BC_ADC_CHANNEL_A5 = 5,
 
     //! @brief ADC channel VDDA
-    BC_ADC_CHANNEL_VDDA = 6 // TODO add to tables
+    BC_ADC_CHANNEL_VDDA = 6
 
 } bc_adc_channel_t;
 

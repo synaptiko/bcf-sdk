@@ -92,10 +92,18 @@ bool bc_analog_sensor_get_result_voltage(bc_analog_sensor_t *self, float *result
         return false;
     }
 
-    // TODU update formula
-    *result = self->result;
+    float vdda;
 
-    return true;
+    if (bc_adc_read_voltage(BC_ADC_CHANNEL_VDDA, &vdda))
+    {
+        *result = self->result * (vdda / 65536.f);
+
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 static void _bc_analog_sensor_task_interval(void *param)
