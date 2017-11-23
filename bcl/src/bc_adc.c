@@ -113,6 +113,8 @@ void bc_adc_init(bc_adc_channel_t channel)
         NVIC_SetPriority(DMA1_Channel1_IRQn, 1);
         NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
+        _bc_adc_calibration();
+
         _bc_adc.initialized = true;
     }
 
