@@ -1,118 +1,90 @@
-#include <bc_adc.h>
 #include <bc_cp201t.h>
+#include <bc_analog_sensor.h>
 
 typedef struct
 {
-    bc_module_sensor_channel_t channel;
+    bc_analog_sensor_t sensor;
     bc_adc_channel_t channel_adc;
-    bc_scheduler_task_id_t task_id_interval;
-    bc_scheduler_task_id_t task_id_measure;
+    bc_module_sensor_channel_t channel_sensor;
     void (*event_handler)(bc_module_sensor_channel_t, bc_cp201t_event_t, void *);
     void *event_param;
-    int32_t thermistor_data;
-    float temperature;
-    bc_tick_t update_interval;
-    bool initialized;
-    bool measurement_active;
 
 } bc_cp201t_t;
 
 static bc_cp201t_t _bc_cp201t[2] =
 {
-    [0] =
+    [BC_MODULE_SENSOR_CHANNEL_A] =
     {
-        .channel = BC_MODULE_SENSOR_CHANNEL_A,
         .channel_adc = BC_ADC_CHANNEL_A4,
-        .initialized = false,
+        .channel_sensor = BC_MODULE_SENSOR_CHANNEL_A
     },
 
-    [1] =
+    [BC_MODULE_SENSOR_CHANNEL_B] =
     {
-        .channel = BC_MODULE_SENSOR_CHANNEL_B,
         .channel_adc = BC_ADC_CHANNEL_A5,
-        .initialized = false,
+        .channel_sensor = BC_MODULE_SENSOR_CHANNEL_B
     }
 };
 
 static const uint16_t _bc_cp201t_lut[1024];
 
-static void _bc_cp201t_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_t event, void *param);
+static void _bc_cp201t_init(bc_analog_sensor_t *self);
 
-static void _bc_cp201t_task_interval(void *param);
+static void _bc_cp201t_enable(bc_analog_sensor_t *self);
 
-static void _bc_cp201t_task_measure(void *param);
+static void _bc_cp201t_disable(bc_analog_sensor_t *self);
 
-bool bc_cp201t_init(bc_module_sensor_channel_t channel)
+static bc_tick_t _bc_cp201t_get_settling_interval(bc_analog_sensor_t *self);
+
+static void _bc_cp201t_sensor_event_handler(bc_analog_sensor_t *self, bc_analog_sensor_event_t event, void *event_param);
+
+void bc_cp201t_init(bc_module_sensor_channel_t channel)
 {
-    bc_cp201t_t *cp201t = &_bc_cp201t[channel];
-
-    if (!cp201t->initialized)
+    static bc_analog_sensor_driver_t driver =
     {
-        if (!bc_module_sensor_init())
-        {
-            return false;
-        }
+        .init = _bc_cp201t_init,
+        .enable = _bc_cp201t_enable,
+        .disable = _bc_cp201t_disable,
+        .get_settling_interval = _bc_cp201t_get_settling_interval
+    };
 
-        // Initialize ADC to measure voltage on CP-201T (temperature)
-        bc_adc_init(cp201t->channel_adc);
-        bc_adc_set_event_handler(cp201t->channel_adc, _bc_cp201t_adc_event_handler, cp201t);
-
-        cp201t->task_id_interval = bc_scheduler_register(_bc_cp201t_task_interval, cp201t, BC_TICK_INFINITY);
-        cp201t->task_id_measure = bc_scheduler_register(_bc_cp201t_task_measure, cp201t, BC_TICK_INFINITY);
-
-        cp201t->initialized = true;
-    }
-
-    return true;
+    bc_analog_sensor_init(&_bc_cp201t[channel].sensor, _bc_cp201t[channel].channel_adc, &driver);
 }
 
 void bc_cp201t_set_event_handler(bc_module_sensor_channel_t channel, void (*event_handler)(bc_module_sensor_channel_t, bc_cp201t_event_t, void *), void *event_param)
 {
-    bc_cp201t_t *cp201t = &_bc_cp201t[channel];
+    bc_cp201t_t *self = &_bc_cp201t[channel];
 
-    cp201t->event_handler = event_handler;
-    cp201t->event_param = event_param;
+    self->event_handler = event_handler;
+    self->event_param = event_param;
+
+    bc_analog_sensor_set_event_handler(&_bc_cp201t[channel].sensor, _bc_cp201t_sensor_event_handler, self);
 }
 
 void bc_cp201t_set_update_interval(bc_module_sensor_channel_t channel, bc_tick_t interval)
 {
-    bc_cp201t_t *cp201t = &_bc_cp201t[channel];
-
-    cp201t->update_interval = interval;
-
-    if (cp201t->update_interval == BC_TICK_INFINITY)
-    {
-        bc_scheduler_plan_absolute(cp201t->task_id_interval, BC_TICK_INFINITY);
-    }
-    else
-    {
-        bc_scheduler_plan_relative(cp201t->task_id_interval, cp201t->update_interval);
-    }
+    bc_analog_sensor_set_update_interval(&_bc_cp201t[channel].sensor, interval);
 }
 
 bool bc_cp201t_measure(bc_cp201t_t *self)
 {
-    if (self->measurement_active)
-    {
-        return false;
-    }
-
-    self->measurement_active = true;
-
-    bc_scheduler_plan_now(self->task_id_measure);
-
-    return true;
+    return bc_analog_sensor_measure(&self->sensor);
 }
 
 bool bc_cp201t_get_temperature_celsius(bc_module_sensor_channel_t channel, float *celsius)
 {
     float vdda_voltage;
     int16_t temp_code;
+    uint16_t data;
     bc_cp201t_t *cp201t = &_bc_cp201t[channel];
-    uint16_t data = cp201t->thermistor_data;
+
+    if (!bc_analog_sensor_get_result_16b(&cp201t->sensor, &data))
+    {
+        return false;
+    }
 
     // Get actual VDDA and accurate data
-    // TODO update flow bc_adc_get_vdda_voltage(&vdda_voltage);
+    bc_adc_read_voltage(BC_ADC_CHANNEL_VDDA, &vdda_voltage);
     data *= 3.3f / vdda_voltage;
 
     // Software shuffle of pull-up and NTC with each other (So that the table can be used)
@@ -135,47 +107,59 @@ bool bc_cp201t_get_temperature_celsius(bc_module_sensor_channel_t channel, float
     }
 }
 
-static void _bc_cp201t_task_interval(void *param)
+static void _bc_cp201t_init(bc_analog_sensor_t *self)
 {
-    bc_cp201t_t *cp201t = param;
+    (void) self;
 
-    bc_cp201t_measure(cp201t);
-
-    bc_scheduler_plan_current_relative(cp201t->update_interval);
+    bc_module_sensor_init();
 }
 
-static void _bc_cp201t_task_measure(void *param)
+static void _bc_cp201t_enable(bc_analog_sensor_t *self)
 {
-    bc_cp201t_t *cp201t = param;
-
     // Connect pull-up
-    bc_module_sensor_set_pull(cp201t->channel, BC_MODULE_SENSOR_PULL_UP_4K7);
-
-    // Start another reading
-
-    // TODO bc_adc_async_read(cp201t->channel_adc);
-}
-
-static void _bc_cp201t_adc_event_handler(bc_adc_channel_t channel, bc_adc_event_t event, void *param)
-{
-    (void) channel;
-
-    bc_cp201t_t *cp201t = param;
-
-    cp201t->measurement_active = false;
-
-    if (event == BC_ADC_EVENT_DONE)
+    if (self->_adc_channel == _bc_cp201t[BC_MODULE_SENSOR_CHANNEL_A].channel_adc)
     {
-        // Disconnect pull-up
-        bc_module_sensor_set_pull(cp201t->channel, BC_MODULE_SENSOR_PULL_NONE);
-
-        // TODO bc_adc_get_result(cp201t->channel_adc, &cp201t->thermistor_data);
-
-        cp201t->event_handler(cp201t->channel, BC_CP201T_EVENT_UPDATE, cp201t->event_param);
+        bc_module_sensor_set_pull(BC_MODULE_SENSOR_CHANNEL_A, BC_MODULE_SENSOR_PULL_UP_4K7);
     }
     else
     {
-        cp201t->event_handler(cp201t->channel, BC_CP201T_EVENT_ERROR, cp201t->event_param);
+        bc_module_sensor_set_pull(BC_MODULE_SENSOR_CHANNEL_B, BC_MODULE_SENSOR_PULL_UP_4K7);
+    }
+}
+
+static void _bc_cp201t_disable(bc_analog_sensor_t *self)
+{
+    // Disconnect pull-up
+    if (self->_adc_channel == _bc_cp201t[BC_MODULE_SENSOR_CHANNEL_A].channel_adc)
+    {
+        bc_module_sensor_set_pull(BC_MODULE_SENSOR_CHANNEL_A, BC_MODULE_SENSOR_PULL_NONE);
+    }
+    else
+    {
+        bc_module_sensor_set_pull(BC_MODULE_SENSOR_CHANNEL_B, BC_MODULE_SENSOR_PULL_NONE);
+    }
+}
+
+static bc_tick_t _bc_cp201t_get_settling_interval(bc_analog_sensor_t *self)
+{
+    (void) self;
+
+    return 0;
+}
+
+static void _bc_cp201t_sensor_event_handler(bc_analog_sensor_t *self, bc_analog_sensor_event_t event, void *event_param)
+{
+    (void) self;
+
+    bc_cp201t_t *cp201t = event_param;
+
+    if (event == BC_ANALOG_SENSOR_EVENT_ERROR)
+    {
+        cp201t->event_handler(cp201t->channel_sensor, BC_CP201T_EVENT_ERROR, cp201t->event_param);
+    }
+    else if (event == BC_ANALOG_SENSOR_EVENT_UPDATE)
+    {
+        cp201t->event_handler(cp201t->channel_sensor, BC_CP201T_EVENT_UPDATE, cp201t->event_param);
     }
 }
 

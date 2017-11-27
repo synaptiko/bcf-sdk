@@ -16,10 +16,8 @@ typedef enum
 
 //! @brief Initialize CP-201T thermistor
 //! @param[in] channel Channel of Sensor Module that sensor is connected to
-//! @return true When successfully initialized
-//! @return false When not successfully initialized
 
-bool bc_cp201t_init(bc_module_sensor_channel_t channel);
+void bc_cp201t_init(bc_module_sensor_channel_t channel);
 
 //! @brief Set callback function
 //! @param[in] channel Channel of Sensor Module that sensor is connected to
