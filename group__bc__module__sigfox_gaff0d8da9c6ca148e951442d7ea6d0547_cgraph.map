@@ -1,0 +1,4 @@
+<map id="bc_module_sigfox_continuous_wave" name="bc_module_sigfox_continuous_wave">
+<area shape="rect" id="node2" href="$group__bc__wssfm10r1at.html#gab8160b0b5849307bc42bb3b243ceca31" title="Generate continuous wave command. " alt="" coords="288,5,515,32"/>
+<area shape="rect" id="node3" href="$group__bc__wssfm10r1at.html#ga69416799fb599c42020bd5012857e550" title="Check if modem is ready for commands. " alt="" coords="563,5,738,32"/>
+</map>

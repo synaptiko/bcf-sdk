@@ -1,0 +1,6 @@
+<map id="bc_tag_lux_meter_set_update_interval" name="bc_tag_lux_meter_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__opt3001.html#gaff0e45c5bd37a1686e3b32e5ffba839f" title="Set measurement interval. " alt="" coords="205,16,365,57"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="640,23,827,50"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="413,23,592,50"/>
+<area shape="rect" id="node5" href="$group__bc__opt3001.html#ga1f1324d720205062e98fff2b118957d7" title="Start measurement manually. " alt="" coords="429,74,576,100"/>
+</map>

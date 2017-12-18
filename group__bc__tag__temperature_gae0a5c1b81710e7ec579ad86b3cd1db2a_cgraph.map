@@ -1,0 +1,4 @@
+<map id="bc_tag_temperature_measure" name="bc_tag_temperature_measure">
+<area shape="rect" id="node2" href="$group__bc__tmp112.html#ga80fd7dd719e8fd97dcb84d846a4b7249" title="Start measurement manually. " alt="" coords="193,12,335,39"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="384,12,571,39"/>
+</map>

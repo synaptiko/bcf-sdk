@@ -1,0 +1,7 @@
+<map id="bc_button_init" name="bc_button_init">
+<area shape="rect" id="node2" href="$group__bc__gpio.html#ga39141debc333424326e1d448f3f81b6d" title="Set pull&#45;up/pull&#45;down configuration for GPIO channel. " alt="" coords="173,56,291,83"/>
+<area shape="rect" id="node5" href="$group__bc__gpio.html#ga63a3ad86dfef88c7c940a2a34945d853" title="Set mode of operation for GPIO channel. " alt="" coords="167,5,297,32"/>
+<area shape="rect" id="node6" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="157,107,307,133"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="355,5,461,32"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="357,56,459,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_gpio_get_input" name="bc_gpio_get_input">
+<area shape="rect" id="node2" href="$group__bc__module__encoder.html#ga6f67406dd1e0db504050b19437779001" title="Initialize Encoder Module. " alt="" coords="181,5,344,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__sensor.html#ga59151c4aa87976251043971cbedc3117" title="Get input of Sensor Module channel. " alt="" coords="185,57,341,98"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_opt3001_set_event_handler" name="bc_opt3001_set_event_handler">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#gaeaa8aa7003f49a1741380c2cdd07e322" title="Initialize BigClown Climate Module. " alt="" coords="209,5,367,32"/>
+<area shape="rect" id="node3" href="$group__bc__tag__lux__meter.html#ga047fd84e9a99942c10df46cf35bdcb6a" title="Set callback function. " alt="" coords="213,57,363,98"/>
+</map>

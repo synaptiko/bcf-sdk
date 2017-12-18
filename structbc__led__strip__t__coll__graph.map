@@ -1,0 +1,4 @@
+<map id="bc_led_strip_t" name="bc_led_strip_t">
+<area shape="rect" id="node2" href="$structbc__led__strip__driver__t.html" title="bc_led_strip_driver_t" alt="" coords="5,5,147,32"/>
+<area shape="rect" id="node3" href="$structbc__led__strip__buffer__t.html" title="bc_led_strip_buffer_t" alt="" coords="171,5,313,32"/>
+</map>

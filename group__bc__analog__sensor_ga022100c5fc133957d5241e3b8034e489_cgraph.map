@@ -1,0 +1,6 @@
+<map id="bc_analog_sensor_init" name="bc_analog_sensor_init">
+<area shape="rect" id="node2" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="432,5,581,32"/>
+<area shape="rect" id="node3" href="$group__bc__adc.html#ga9860dd57089d741f4efabf63b40e7c09" title="Initialize ADC channel. " alt="" coords="251,56,339,83"/>
+<area shape="rect" id="node5" href="$group__bc__adc.html#ga1d27a22680948a4970fad252434158b4" title="Set callback function. " alt="" coords="206,107,383,133"/>
+<area shape="rect" id="node4" href="$group__bc__adc.html#ga47b8f485152827bffbdf48337c744eb5" title="Set ADC result format. " alt="" coords="440,56,573,83"/>
+</map>

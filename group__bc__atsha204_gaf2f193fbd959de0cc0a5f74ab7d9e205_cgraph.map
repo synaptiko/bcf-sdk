@@ -1,0 +1,4 @@
+<map id="bc_atsha204_read_serial_number" name="bc_atsha204_read_serial_number">
+<area shape="rect" id="node2" href="$group__bc__atsha204.html#ga593d080b9856045d4eff71879061a1d5" title="Check if is ready for commands. " alt="" coords="235,5,387,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="221,56,400,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="bc_tca9534a_read_pin" name="bc_tca9534a_read_pin">
+<area shape="rect" id="node2" href="$group__bc__tca9534a.html#gafae0e31f827bddb3e47958a3656ea32b" title="Read state of all pins. " alt="" coords="205,5,363,32"/>
+<area shape="rect" id="node3" href="$group__bc__i2c.html#gaa1e6123c2b68672fb6c591d4c73d4e0d" title="Memory read 1 byte from I2C channel. " alt="" coords="411,5,578,32"/>
+<area shape="rect" id="node4" href="$group__bc__i2c.html#gac2f33729bf9c4751342a88bb917ee9fc" title="Memory read from I2C channel. " alt="" coords="627,5,773,32"/>
+<area shape="rect" id="node5" href="$group__bc__ds28e17.html#ga159050bb4986621d5d289433c987b5c0" title="Memory read from I2C. " alt="" coords="821,5,1000,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="bc_uart_init" name="bc_uart_init">
+<area shape="rect" id="node2" href="$group__bc__log.html#ga38402ab492b081202e989181f9242f34" title="Initialize logging facility. " alt="" coords="174,5,258,32"/>
+<area shape="rect" id="node3" href="$group__bc__td1207r.html#ga1b5a8cc467f2285e7894a9397be094dc" title="Initialize TD1207R. " alt="" coords="161,56,271,83"/>
+<area shape="rect" id="node5" href="$group__bc__wssfm10r1at.html#ga59a1f344c6a04ca7feaed904f5e578aa" title="Initialize WSSFM10R1AT. " alt="" coords="145,107,287,133"/>
+<area shape="rect" id="node4" href="$group__bc__module__sigfox.html#ga85ecac7b2744ca0180323c5448eafe0d" title="Initialize BigClown SigFox Module. " alt="" coords="337,81,487,108"/>
+</map>

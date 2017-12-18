@@ -1,0 +1,9 @@
+<map id="bc_sc16is740_read" name="bc_sc16is740_read">
+<area shape="rect" id="node2" href="$group__bc__tick.html#ga5291d354b48d9599d185969d53f2bf8a" title="Get absolute timestamp since start of program. " alt="" coords="225,56,314,83"/>
+<area shape="rect" id="node5" href="$group__bc__sc16is740.html#ga7ed6348a358e2d3617ef9de78a80d432" title="Get RX FIXO available data. " alt="" coords="189,107,349,133"/>
+<area shape="rect" id="node7" href="$group__bc__i2c.html#gac2f33729bf9c4751342a88bb917ee9fc" title="Memory read from I2C channel. " alt="" coords="613,132,760,159"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="429,5,534,32"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="430,56,533,83"/>
+<area shape="rect" id="node6" href="$group__bc__i2c.html#gaa1e6123c2b68672fb6c591d4c73d4e0d" title="Memory read 1 byte from I2C channel. " alt="" coords="398,107,565,133"/>
+<area shape="rect" id="node8" href="$group__bc__ds28e17.html#ga159050bb4986621d5d289433c987b5c0" title="Memory read from I2C. " alt="" coords="808,132,987,159"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_tmp112_get_temperature_fahrenheit" name="bc_tmp112_get_temperature_fahrenheit">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#gab0d3a05b8fd89901a0c6d4f8d1f8b3f0" title="Get measured temperature in degrees of Fahrenheit. " alt="" coords="252,5,415,46"/>
+<area shape="rect" id="node3" href="$group__bc__tag__temperature.html#ga1b66af3d89e704e0bcf7e491be270b88" title="Get measured temperature in degrees of Fahrenheit. " alt="" coords="240,70,427,111"/>
+</map>

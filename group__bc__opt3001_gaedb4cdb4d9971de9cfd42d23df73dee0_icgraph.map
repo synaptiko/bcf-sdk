@@ -1,0 +1,6 @@
+<map id="bc_opt3001_get_illuminance_raw" name="bc_opt3001_get_illuminance_raw">
+<area shape="rect" id="node2" href="$group__bc__opt3001.html#ga295a1ed2229920a6b4794c75038b1b44" title="Get measured illuminance in lux. " alt="" coords="269,45,480,72"/>
+<area shape="rect" id="node5" href="$group__bc__tag__lux__meter.html#ga75fa0c19f5eda51d54e83e4d6f74d4c7" title="Get measured illuminance as raw value. " alt="" coords="299,97,450,138"/>
+<area shape="rect" id="node3" href="$group__bc__module__climate.html#ga068d604b64a5ef5f7f6147fcbf2d24d1" title="Get measured illuminance in lux. " alt="" coords="529,5,687,46"/>
+<area shape="rect" id="node4" href="$group__bc__tag__lux__meter.html#ga3be5b5e82698a2406fa59f19c9684b91" title="Get measured illuminance in lux. " alt="" coords="533,70,683,111"/>
+</map>

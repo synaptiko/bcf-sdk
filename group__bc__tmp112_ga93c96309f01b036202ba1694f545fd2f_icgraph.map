@@ -1,0 +1,12 @@
+<map id="bc_tmp112_get_temperature_raw" name="bc_tmp112_get_temperature_raw">
+<area shape="rect" id="node2" href="$group__bc__tag__temperature.html#ga717da6197f3d30f8ee39e1682459f108" title="Get measured temperature as raw value. " alt="" coords="287,38,438,79"/>
+<area shape="rect" id="node3" href="$group__bc__tmp112.html#ga9d591221cfb0cbb55e5104ffd20ff0ec" title="Get measured temperature in degrees of Celsius. " alt="" coords="269,103,456,145"/>
+<area shape="rect" id="node4" href="$group__bc__module__climate.html#ga99b6a158e6d892093ec3624344380f0b" title="Get measured temperature in degrees of Celsius. " alt="" coords="518,5,677,46"/>
+<area shape="rect" id="node5" href="$group__bc__tag__temperature.html#ga6df2d42735d92193f1da18b1078df39f" title="Get measured temperature in degrees of Celsius. " alt="" coords="512,70,683,111"/>
+<area shape="rect" id="node6" href="$group__bc__tmp112.html#gab9f11bac41821cc261fb7d3cf58e0efb" title="Get measured temperature in degrees of Fahrenheit. " alt="" coords="504,135,691,177"/>
+<area shape="rect" id="node9" href="$group__bc__tmp112.html#gac438ff1d6f87792dd5899b44cda3f8fa" title="Get measured temperature in kelvin. " alt="" coords="504,201,691,242"/>
+<area shape="rect" id="node7" href="$group__bc__module__climate.html#gab0d3a05b8fd89901a0c6d4f8d1f8b3f0" title="Get measured temperature in degrees of Fahrenheit. " alt="" coords="751,70,913,111"/>
+<area shape="rect" id="node8" href="$group__bc__tag__temperature.html#ga1b66af3d89e704e0bcf7e491be270b88" title="Get measured temperature in degrees of Fahrenheit. " alt="" coords="739,135,925,177"/>
+<area shape="rect" id="node10" href="$group__bc__module__climate.html#ga50f2fd18493061a7f793cbbe0e3ac59f" title="Get measured temperature in kelvin. " alt="" coords="753,201,911,242"/>
+<area shape="rect" id="node11" href="$group__bc__tag__temperature.html#ga5d0c15faca9c4ea1c73ce79f772410c4" title="Get measured temperature in kelvin. " alt="" coords="750,266,914,307"/>
+</map>

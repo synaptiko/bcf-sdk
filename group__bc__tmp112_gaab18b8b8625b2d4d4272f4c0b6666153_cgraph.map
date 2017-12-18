@@ -1,0 +1,5 @@
+<map id="bc_tmp112_set_update_interval" name="bc_tmp112_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="437,23,624,50"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="211,23,389,50"/>
+<area shape="rect" id="node4" href="$group__bc__tmp112.html#ga80fd7dd719e8fd97dcb84d846a4b7249" title="Start measurement manually. " alt="" coords="229,74,371,100"/>
+</map>

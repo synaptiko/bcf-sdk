@@ -1,0 +1,5 @@
+<map id="bc_exti_register" name="bc_exti_register">
+<area shape="rect" id="node2" href="$group__bc__lis2dh12.html#gabdb52865d27aca4cd3f0ca31133f4187" title="Enable or disable accelerometer threshold alarm. " alt="" coords="172,5,327,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__encoder.html#ga6f67406dd1e0db504050b19437779001" title="Initialize Encoder Module. " alt="" coords="168,56,331,83"/>
+<area shape="rect" id="node4" href="$group__bc__pulse__counter.html#ga6d78b1c52014b693c271c39d17516694" title="Initialize pulse counter. " alt="" coords="175,107,323,133"/>
+</map>

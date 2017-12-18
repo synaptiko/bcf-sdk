@@ -1,0 +1,9 @@
+<map id="bc_module_sensor_set_pull" name="bc_module_sensor_set_pull">
+<area shape="rect" id="node2" href="$group__bc__gpio.html#ga39141debc333424326e1d448f3f81b6d" title="Set pull&#45;up/pull&#45;down configuration for GPIO channel. " alt="" coords="258,56,377,83"/>
+<area shape="rect" id="node5" href="$group__bc__tca9534a.html#ga4707e216045466f49d56e2fe58f9ec04" title="Write state to all pins. " alt="" coords="237,107,397,133"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="478,5,583,32"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="479,56,582,83"/>
+<area shape="rect" id="node6" href="$group__bc__i2c.html#ga313a279d51a755361b0d57eea6bcc226" title="Memory write 1 byte to I2C channel. " alt="" coords="445,107,616,133"/>
+<area shape="rect" id="node7" href="$group__bc__i2c.html#ga09c340b2ac57f2c8ed358dab05cf9c0b" title="Memory write to I2C channel. " alt="" coords="664,107,813,133"/>
+<area shape="rect" id="node8" href="$group__bc__ds28e17.html#gae1baafe53feb279c3556a122782431ec" title="Memory write to I2C. " alt="" coords="861,107,1043,133"/>
+</map>

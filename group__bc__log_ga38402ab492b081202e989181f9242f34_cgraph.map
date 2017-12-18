@@ -1,0 +1,4 @@
+<map id="bc_log_init" name="bc_log_init">
+<area shape="rect" id="node2" href="$group__bc__uart.html#gad397ffa074ff6fbd2444a27f369d2edf" title="Initialize UART channel. " alt="" coords="145,5,234,32"/>
+<area shape="rect" id="node3" href="$group__bc__uart.html#ga6bdfc1de82c1bf00b5cf9ba4421d7c18" title="Write data to UART channel (blocking call) " alt="" coords="139,56,239,83"/>
+</map>

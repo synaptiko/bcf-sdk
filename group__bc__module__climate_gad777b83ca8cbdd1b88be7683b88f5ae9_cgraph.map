@@ -1,0 +1,4 @@
+<map id="bc_module_climate_measure_lux_meter" name="bc_module_climate_measure_lux_meter">
+<area shape="rect" id="node2" href="$group__bc__opt3001.html#ga1f1324d720205062e98fff2b118957d7" title="Start measurement manually. " alt="" coords="245,12,392,39"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="440,12,627,39"/>
+</map>

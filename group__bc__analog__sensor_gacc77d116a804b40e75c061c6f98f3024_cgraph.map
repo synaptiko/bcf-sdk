@@ -1,0 +1,6 @@
+<map id="bc_analog_sensor_set_update_interval" name="bc_analog_sensor_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="205,5,392,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="209,56,388,83"/>
+<area shape="rect" id="node4" href="$group__bc__analog__sensor.html#ga4b0f97f63489f37b8e685d22b1cec576" title="Start measurement manually. " alt="" coords="207,107,391,133"/>
+<area shape="rect" id="node5" href="$group__bc__scheduler.html#ga46c874e6f1b363cf6851cfa8f837c398" title="Schedule specified task for immediate execution. " alt="" coords="441,107,602,133"/>
+</map>

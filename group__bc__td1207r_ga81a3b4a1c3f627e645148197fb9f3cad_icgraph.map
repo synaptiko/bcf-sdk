@@ -1,0 +1,5 @@
+<map id="bc_td1207r_is_ready" name="bc_td1207r_is_ready">
+<area shape="rect" id="node2" href="$group__bc__module__sigfox.html#gae48d0c47c1f298945f2d920a771c4d19" title="Check if modem is ready for commands. " alt="" coords="197,5,341,46"/>
+<area shape="rect" id="node3" href="$group__bc__td1207r.html#ga901747d090d799193a17dd46850c2d75" title="Send RF frame command. " alt="" coords="201,70,337,111"/>
+<area shape="rect" id="node4" href="$group__bc__module__sigfox.html#gaff30d9b95f4292f5bf26c0ba02f37160" title="Send RF frame command. " alt="" coords="389,70,552,111"/>
+</map>

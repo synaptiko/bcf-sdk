@@ -1,0 +1,12 @@
+<map id="bc_module_climate_set_update_interval_all_sensors" name="bc_module_climate_set_update_interval_all_sensors">
+<area shape="rect" id="node2" href="$group__bc__tmp112.html#gaab18b8b8625b2d4d4272f4c0b6666153" title="Set measurement interval. " alt="" coords="224,67,381,109"/>
+<area shape="rect" id="node6" href="$group__bc__sht20.html#ga24e0c92dae36a02052180a2ee527c743" title="Set measurement interval. " alt="" coords="229,159,376,201"/>
+<area shape="rect" id="node8" href="$group__bc__opt3001.html#gaff0e45c5bd37a1686e3b32e5ffba839f" title="Set measurement interval. " alt="" coords="223,325,383,366"/>
+<area shape="rect" id="node10" href="$group__bc__mpl3115a2.html#gaa976e072fb109951e3d170400a216bf7" title="Set measurement interval. " alt="" coords="214,242,391,283"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="667,208,853,235"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="440,208,619,235"/>
+<area shape="rect" id="node5" href="$group__bc__tmp112.html#ga80fd7dd719e8fd97dcb84d846a4b7249" title="Start measurement manually. " alt="" coords="458,5,601,32"/>
+<area shape="rect" id="node7" href="$group__bc__sht20.html#gaa9386718491799a11cee168b2759d6b3" title="Start measurement manually. " alt="" coords="463,107,595,133"/>
+<area shape="rect" id="node9" href="$group__bc__opt3001.html#ga1f1324d720205062e98fff2b118957d7" title="Start measurement manually. " alt="" coords="456,411,603,437"/>
+<area shape="rect" id="node11" href="$group__bc__mpl3115a2.html#ga567ddfa6b0f91562a24068b943c2f014" title="Start measurement manually. " alt="" coords="448,259,611,285"/>
+</map>

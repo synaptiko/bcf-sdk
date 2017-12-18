@@ -1,0 +1,4 @@
+<map id="bc_td1207r_send_rf_frame" name="bc_td1207r_send_rf_frame">
+<area shape="rect" id="node2" href="$group__bc__td1207r.html#ga81a3b4a1c3f627e645148197fb9f3cad" title="Check if modem is ready for commands. " alt="" coords="199,5,342,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#ga46c874e6f1b363cf6851cfa8f837c398" title="Schedule specified task for immediate execution. " alt="" coords="190,56,351,83"/>
+</map>

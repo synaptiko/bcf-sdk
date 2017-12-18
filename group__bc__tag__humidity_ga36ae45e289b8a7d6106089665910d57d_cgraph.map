@@ -1,0 +1,33 @@
+<map id="bc_tag_humidity_init" name="bc_tag_humidity_init">
+<area shape="rect" id="node2" href="$group__bc__hts221.html#ga6fa1b3193fe2b98f5edf0066b9a4bc7a" title="Initialize HTS221. " alt="" coords="220,200,327,227"/>
+<area shape="rect" id="node26" href="$group__bc__hts221.html#ga81ea551a9ae2700acabdd40a3b09866a" title="Set callback function. " alt="" coords="200,353,347,394"/>
+<area shape="rect" id="node27" href="$group__bc__hdc2080.html#gabac119de881d5c96af19f32f2f7927ce" title="Initialize HDC2080. " alt="" coords="215,251,331,277"/>
+<area shape="rect" id="node28" href="$group__bc__hdc2080.html#ga179c4a0179932c750fb325ad76f01a3d" title="Set callback function. " alt="" coords="195,418,351,459"/>
+<area shape="rect" id="node29" href="$group__bc__sht20.html#gad12a0ad3e38bbb1ed81f0087180ac3af" title="Initialize SHT20. " alt="" coords="224,301,323,328"/>
+<area shape="rect" id="node30" href="$group__bc__sht20.html#ga85374619b5780e21e6ce1ebc94960c40" title="Set callback function. " alt="" coords="204,483,343,525"/>
+<area shape="rect" id="node31" href="$group__bc__sht30.html#ga1ba8cd4b03dd6de2fa5a78e7ded48e71" title="Initialize SHT30. " alt="" coords="224,149,323,176"/>
+<area shape="rect" id="node32" href="$group__bc__sht30.html#gaaeeefd20eae36969f12d880721935a95" title="Set callback function. " alt="" coords="204,549,343,590"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="400,251,549,277"/>
+<area shape="rect" id="node4" href="$group__bc__i2c.html#ga8f29242288303f0328c6514068e516fa" title="Initialize I2C channel. " alt="" coords="433,200,517,227"/>
+<area shape="rect" id="node5" href="$group__bc__i2c.html#ga278d6844673b8460aecade7e4830b854" title="Set I2C channel speed. " alt="" coords="626,91,753,117"/>
+<area shape="rect" id="node10" href="$group__bc__module__sensor.html#ga1079c2c19c21e89aa17cc1078737eb4e" title="Initialize Sensor Module. " alt="" coords="612,200,767,227"/>
+<area shape="rect" id="node23" href="$group__bc__module__sensor.html#gafe9652b30cde2e0f524057efe47dc9e9" title="Set pull of Sensor Module channel. " alt="" coords="598,255,781,281"/>
+<area shape="rect" id="node25" href="$group__bc__ds28e17.html#ga9111c4df0d96cbb920fb9cf5de06073c" title="Initialize DS28E17. " alt="" coords="631,305,747,332"/>
+<area shape="rect" id="node6" href="$group__bc__ds28e17.html#ga5ac9b2a6c35ad5c8fe4ea27f182ef162" title="Set I2C speed. " alt="" coords="830,67,989,93"/>
+<area shape="rect" id="node7" href="$group__bc__onewire.html#ga00b9f05b4be593fd343a605716a56508" title="Reset the 1&#45;Wire bus and return the presence of any device. " alt="" coords="1061,5,1185,32"/>
+<area shape="rect" id="node8" href="$group__bc__onewire.html#gaeb2baea72df8586c92601488237bc99e" title="Select device. " alt="" coords="1057,56,1188,83"/>
+<area shape="rect" id="node9" href="$group__bc__onewire.html#ga4d0d2814df622e67fde9ca3de5e981f7" title="Select device. " alt="" coords="1061,107,1184,133"/>
+<area shape="rect" id="node11" href="$group__bc__tca9534a.html#gab392a5644d1d4ccab47c95f04b4786cf" title="Initialize TCA9534A. " alt="" coords="849,139,969,165"/>
+<area shape="rect" id="node15" href="$group__bc__tca9534a.html#ga4707e216045466f49d56e2fe58f9ec04" title="Write state to all pins. " alt="" coords="829,256,989,283"/>
+<area shape="rect" id="node19" href="$group__bc__tca9534a.html#ga3031df848b97bb621de3a2268af49b4e" title="Set direction of all pins. " alt="" coords="834,190,985,231"/>
+<area shape="rect" id="node20" href="$group__bc__gpio.html#ga06db16c5cd7f6ffff7e297970814221d" title="Initialize GPIO channel. " alt="" coords="864,307,955,333"/>
+<area shape="rect" id="node12" href="$group__bc__i2c.html#gaa1e6123c2b68672fb6c591d4c73d4e0d" title="Memory read 1 byte from I2C channel. " alt="" coords="1039,157,1206,184"/>
+<area shape="rect" id="node13" href="$group__bc__i2c.html#gac2f33729bf9c4751342a88bb917ee9fc" title="Memory read from I2C channel. " alt="" coords="1257,157,1404,184"/>
+<area shape="rect" id="node14" href="$group__bc__ds28e17.html#ga159050bb4986621d5d289433c987b5c0" title="Memory read from I2C. " alt="" coords="1455,157,1633,184"/>
+<area shape="rect" id="node16" href="$group__bc__i2c.html#ga313a279d51a755361b0d57eea6bcc226" title="Memory write 1 byte to I2C channel. " alt="" coords="1037,232,1208,259"/>
+<area shape="rect" id="node17" href="$group__bc__i2c.html#ga09c340b2ac57f2c8ed358dab05cf9c0b" title="Memory write to I2C channel. " alt="" coords="1256,232,1405,259"/>
+<area shape="rect" id="node18" href="$group__bc__ds28e17.html#gae1baafe53feb279c3556a122782431ec" title="Memory write to I2C. " alt="" coords="1453,232,1635,259"/>
+<area shape="rect" id="node21" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="1070,307,1175,333"/>
+<area shape="rect" id="node22" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="1071,357,1174,384"/>
+<area shape="rect" id="node24" href="$group__bc__gpio.html#ga39141debc333424326e1d448f3f81b6d" title="Set pull&#45;up/pull&#45;down configuration for GPIO channel. " alt="" coords="850,357,969,384"/>
+</map>

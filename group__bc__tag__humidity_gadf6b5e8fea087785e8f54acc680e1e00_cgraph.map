@@ -1,0 +1,12 @@
+<map id="bc_tag_humidity_set_update_interval" name="bc_tag_humidity_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__hts221.html#ga38dbc73766d61578e16fa8030e54c866" title="Set measurement interval. " alt="" coords="202,67,355,109"/>
+<area shape="rect" id="node6" href="$group__bc__hdc2080.html#gaa4cf9c164b7a2dde482968d8b4967ef5" title="Set measurement interval. " alt="" coords="197,159,360,201"/>
+<area shape="rect" id="node8" href="$group__bc__sht20.html#ga24e0c92dae36a02052180a2ee527c743" title="Set measurement interval. " alt="" coords="205,325,352,366"/>
+<area shape="rect" id="node10" href="$group__bc__sht30.html#ga76e7a95ad2752d3868ffd07ab1327d01" title="Set measurement interval. " alt="" coords="205,242,352,283"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="635,208,821,235"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="408,208,587,235"/>
+<area shape="rect" id="node5" href="$group__bc__hts221.html#gafa29ed60b0ecc2dd20fc644b7297d594" title="Start measurement manually. " alt="" coords="428,5,567,32"/>
+<area shape="rect" id="node7" href="$group__bc__hdc2080.html#gad0ea1a0ab194f6adbc099d2181ac1429" title="Start measurement manually. " alt="" coords="423,107,572,133"/>
+<area shape="rect" id="node9" href="$group__bc__sht20.html#gaa9386718491799a11cee168b2759d6b3" title="Start measurement manually. " alt="" coords="431,411,563,437"/>
+<area shape="rect" id="node11" href="$group__bc__sht30.html#gacabf38a843279a9d30051045bb823420" title="Start measurement manually. " alt="" coords="431,259,563,285"/>
+</map>

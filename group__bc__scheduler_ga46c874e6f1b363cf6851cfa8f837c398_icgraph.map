@@ -1,0 +1,19 @@
+<map id="bc_scheduler_plan_now" name="bc_scheduler_plan_now">
+<area shape="rect" id="node2" href="$group__bc__analog__sensor.html#ga4b0f97f63489f37b8e685d22b1cec576" title="Start measurement manually. " alt="" coords="216,16,400,43"/>
+<area shape="rect" id="node4" href="$group__bc__flood__detector.html#ga174374b7fe179e6aaba9ef740834d7c2" title="Start measurement manually. " alt="" coords="217,71,399,97"/>
+<area shape="rect" id="node5" href="$group__bc__lp8.html#ga1b3fc8217722df40006f4e7f3f23cd76" title="Start measurement manually. " alt="" coords="249,121,367,148"/>
+<area shape="rect" id="node11" href="$group__bc__pyq1648.html#ga85f892884862b1ab2b090984da978f66" title="Set PYQ1648 sensitivity. " alt="" coords="217,172,399,199"/>
+<area shape="rect" id="node13" href="$group__bc__spirit.html#ga0a167c138bcc3986b3ce8da82571b497" title="Enter RX state. " alt="" coords="260,223,356,249"/>
+<area shape="rect" id="node14" href="$group__bc__spirit.html#gaa64956b3def9c1bf2c1bbcb02e34b9f6" title="Enter sleep state. " alt="" coords="250,273,366,300"/>
+<area shape="rect" id="node15" href="$group__bc__spirit.html#gae5b5df526c66cf6628d31005986e505f" title="Enter TX state. " alt="" coords="260,324,356,351"/>
+<area shape="rect" id="node16" href="$group__bc__td1207r.html#ga901747d090d799193a17dd46850c2d75" title="Send RF frame command. " alt="" coords="240,375,376,417"/>
+<area shape="rect" id="node18" href="$group__bc__usb__cdc.html#gaa7b41f830a663e6501c61cf1dc5aa39c" title="Write buffer to USB CDC (non&#45;blocking call) " alt="" coords="245,441,371,468"/>
+<area shape="rect" id="node3" href="$group__bc__analog__sensor.html#gacc77d116a804b40e75c061c6f98f3024" title="Set measurement interval. " alt="" coords="471,5,623,46"/>
+<area shape="rect" id="node6" href="$group__bc__lp8.html#gae399e4f224010a0faf68c69d9298244e" title="Set measurement interval. " alt="" coords="457,71,637,97"/>
+<area shape="rect" id="node8" href="$group__bc__lp8.html#gabeaaa8371190e2a79f45bb58190e26d0" title="Request sensor calibration. " alt="" coords="483,121,610,148"/>
+<area shape="rect" id="node10" href="$group__bc__module__co2.html#ga0136bbb9d299c51432b9349fe0aeb760" title="Start measurement manually. " alt="" coords="461,172,632,199"/>
+<area shape="rect" id="node7" href="$group__bc__module__co2.html#ga9619f5f2db2d1463584a433c959694b1" title="Set measurement interval. " alt="" coords="693,59,877,101"/>
+<area shape="rect" id="node9" href="$group__bc__module__co2.html#ga3adeac50c588f805391ed238367ce136" title="Request sensor calibration. " alt="" coords="696,125,875,152"/>
+<area shape="rect" id="node12" href="$group__bc__module__pir.html#gad9fd393ed55c7c813bd295b018fe5b8d" title="Set sensor sensitivity. " alt="" coords="448,223,645,249"/>
+<area shape="rect" id="node17" href="$group__bc__module__sigfox.html#gaff30d9b95f4292f5bf26c0ba02f37160" title="Send RF frame command. " alt="" coords="465,375,628,417"/>
+</map>

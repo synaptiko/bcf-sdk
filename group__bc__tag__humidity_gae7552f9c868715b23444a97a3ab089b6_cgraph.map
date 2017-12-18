@@ -1,0 +1,7 @@
+<map id="bc_tag_humidity_measure" name="bc_tag_humidity_measure">
+<area shape="rect" id="node2" href="$group__bc__hts221.html#gafa29ed60b0ecc2dd20fc644b7297d594" title="Start measurement manually. " alt="" coords="235,5,373,32"/>
+<area shape="rect" id="node4" href="$group__bc__hdc2080.html#gad0ea1a0ab194f6adbc099d2181ac1429" title="Start measurement manually. " alt="" coords="229,56,379,83"/>
+<area shape="rect" id="node5" href="$group__bc__sht20.html#gaa9386718491799a11cee168b2759d6b3" title="Start measurement manually. " alt="" coords="238,107,370,133"/>
+<area shape="rect" id="node6" href="$group__bc__sht30.html#gacabf38a843279a9d30051045bb823420" title="Start measurement manually. " alt="" coords="238,157,370,184"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="427,81,613,108"/>
+</map>

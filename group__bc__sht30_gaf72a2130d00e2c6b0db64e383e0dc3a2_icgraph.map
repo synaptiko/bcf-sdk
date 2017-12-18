@@ -1,0 +1,5 @@
+<map id="bc_sht30_get_humidity_raw" name="bc_sht30_get_humidity_raw">
+<area shape="rect" id="node2" href="$group__bc__sht30.html#gad63b3af52a35497b1204239be058ffd2" title="Get measured humidity as percentage. " alt="" coords="238,5,394,46"/>
+<area shape="rect" id="node4" href="$group__bc__tag__humidity.html#ga03c136b448a0b082eee32a64d8e7da2d" title="Get measured humidity as raw value. " alt="" coords="245,70,387,111"/>
+<area shape="rect" id="node3" href="$group__bc__tag__humidity.html#gad7f456d59973cda64de2e155f321e4db" title="Get measured humidity as percentage. " alt="" coords="443,5,592,46"/>
+</map>

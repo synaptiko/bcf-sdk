@@ -1,0 +1,7 @@
+<map id="bc_uart_async_write" name="bc_uart_async_write">
+<area shape="rect" id="node2" href="$group__bc__fifo.html#ga7c6039111e9e8d59771f49f87c26504e" title="Write data to FIFO. " alt="" coords="243,33,339,60"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="433,8,538,35"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="434,71,537,97"/>
+<area shape="rect" id="node5" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="216,135,365,161"/>
+<area shape="rect" id="node6" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="197,185,384,212"/>
+</map>

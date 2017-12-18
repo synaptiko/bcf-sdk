@@ -1,0 +1,4 @@
+<map id="bc_module_sigfox_read_device_pac" name="bc_module_sigfox_read_device_pac">
+<area shape="rect" id="node2" href="$group__bc__wssfm10r1at.html#gab3f0f3e28e58ec8ad4f48ab27d2621ad" title="Read device PAC command. " alt="" coords="214,5,365,46"/>
+<area shape="rect" id="node3" href="$group__bc__wssfm10r1at.html#ga69416799fb599c42020bd5012857e550" title="Check if modem is ready for commands. " alt="" coords="414,12,589,39"/>
+</map>

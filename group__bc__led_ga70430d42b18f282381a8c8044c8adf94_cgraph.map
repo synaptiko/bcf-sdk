@@ -1,0 +1,8 @@
+<map id="bc_led_pulse" name="bc_led_pulse">
+<area shape="rect" id="node2" href="$group__bc__scheduler.html#gae1d865cf578e9994cd50a972af54fc20" title="Unregister specified task. " alt="" coords="168,5,331,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gab7a3ab8db1e126e531bfa8ebb3439586" title="Schedule specified task to tick relative from now. " alt="" coords="152,56,347,83"/>
+<area shape="rect" id="node4" href="$group__bc__tick.html#ga5291d354b48d9599d185969d53f2bf8a" title="Get absolute timestamp since start of program. " alt="" coords="395,81,485,108"/>
+<area shape="rect" id="node7" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="175,157,324,184"/>
+<area shape="rect" id="node5" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="534,56,639,83"/>
+<area shape="rect" id="node6" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="535,107,638,133"/>
+</map>

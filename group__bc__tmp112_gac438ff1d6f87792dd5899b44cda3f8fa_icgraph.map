@@ -1,0 +1,4 @@
+<map id="bc_tmp112_get_temperature_kelvin" name="bc_tmp112_get_temperature_kelvin">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#ga50f2fd18493061a7f793cbbe0e3ac59f" title="Get measured temperature in kelvin. " alt="" coords="243,5,402,46"/>
+<area shape="rect" id="node3" href="$group__bc__tag__temperature.html#ga5d0c15faca9c4ea1c73ce79f772410c4" title="Get measured temperature in kelvin. " alt="" coords="241,70,405,111"/>
+</map>

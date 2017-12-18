@@ -1,0 +1,5 @@
+<map id="bc_scheduler_plan_current_from_now" name="bc_scheduler_plan_current_from_now">
+<area shape="rect" id="node2" href="$group__bc__tick.html#ga5291d354b48d9599d185969d53f2bf8a" title="Get absolute timestamp since start of program. " alt="" coords="233,31,322,57"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="371,5,477,32"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="373,56,475,83"/>
+</map>

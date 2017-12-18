@@ -1,0 +1,6 @@
+<map id="bc_onewire_relay_set_state" name="bc_onewire_relay_set_state">
+<area shape="rect" id="node2" href="$group__bc__onewire.html#ga00b9f05b4be593fd343a605716a56508" title="Reset the 1&#45;Wire bus and return the presence of any device. " alt="" coords="211,5,335,32"/>
+<area shape="rect" id="node3" href="$group__bc__onewire.html#gaeb2baea72df8586c92601488237bc99e" title="Select device. " alt="" coords="208,56,339,83"/>
+<area shape="rect" id="node4" href="$group__bc__onewire.html#ga4d0d2814df622e67fde9ca3de5e981f7" title="Select device. " alt="" coords="212,107,335,133"/>
+<area shape="rect" id="node5" href="$group__bc__onewire.html#gaa847e98434c40258f33dcd772e309f66" title="Select device. " alt="" coords="203,157,344,184"/>
+</map>

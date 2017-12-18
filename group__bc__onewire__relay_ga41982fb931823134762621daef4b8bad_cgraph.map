@@ -1,0 +1,7 @@
+<map id="bc_onewire_relay_init" name="bc_onewire_relay_init">
+<area shape="rect" id="node2" href="$group__bc__onewire.html#ga60666697964ce9ea0bf87ac407a1d63c" title="Initialize 1&#45;Wire. " alt="" coords="200,31,312,57"/>
+<area shape="rect" id="node3" href="$group__bc__gpio.html#ga06db16c5cd7f6ffff7e297970814221d" title="Initialize GPIO channel. " alt="" coords="375,5,465,32"/>
+<area shape="rect" id="node6" href="$group__bc__gpio.html#ga39141debc333424326e1d448f3f81b6d" title="Set pull&#45;up/pull&#45;down configuration for GPIO channel. " alt="" coords="361,56,479,83"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="529,5,634,32"/>
+<area shape="rect" id="node5" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="530,56,633,83"/>
+</map>

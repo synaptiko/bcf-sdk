@@ -1,0 +1,4 @@
+<map id="bc_module_climate_measure_hygrometer" name="bc_module_climate_measure_hygrometer">
+<area shape="rect" id="node2" href="$group__bc__sht20.html#gaa9386718491799a11cee168b2759d6b3" title="Start measurement manually. " alt="" coords="246,12,378,39"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="427,12,613,39"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_spi_set_speed" name="bc_spi_set_speed">
+<area shape="rect" id="node2" href="$group__bc__spi.html#ga00fa848c8a590fbb7ba1d567a749a87c" title="Initialize SPI channel. " alt="" coords="182,5,266,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__lcd.html#gaf2ab237ad87e874615bcddec5c0e7ca2" title="Initialize lcd. " alt="" coords="315,5,448,32"/>
+</map>

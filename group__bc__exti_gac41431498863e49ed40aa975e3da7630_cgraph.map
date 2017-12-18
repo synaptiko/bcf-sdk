@@ -1,0 +1,4 @@
+<map id="bc_exti_register" name="bc_exti_register">
+<area shape="rect" id="node2" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="169,5,274,32"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="170,56,273,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_adc_init" name="bc_adc_init">
+<area shape="rect" id="node2" href="$group__bc__analog__sensor.html#ga022100c5fc133957d5241e3b8034e489" title="Initialize generic analog sensor. " alt="" coords="145,5,295,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__battery.html#gaac097c765f9bccd2db427b403cffdfcc" title="Initialize Battery Module. " alt="" coords="142,56,298,83"/>
+</map>

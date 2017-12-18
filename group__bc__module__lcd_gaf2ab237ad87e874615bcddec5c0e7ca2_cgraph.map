@@ -1,0 +1,7 @@
+<map id="bc_module_lcd_init" name="bc_module_lcd_init">
+<area shape="rect" id="node2" href="$group__bc__spi.html#ga00fa848c8a590fbb7ba1d567a749a87c" title="Initialize SPI channel. " alt="" coords="217,56,301,83"/>
+<area shape="rect" id="node5" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="379,107,528,133"/>
+<area shape="rect" id="node6" href="$group__bc__module__lcd.html#ga8365f330ecd5c17de94930a4d3745547" title="Lcd clear. " alt="" coords="187,157,331,184"/>
+<area shape="rect" id="node3" href="$group__bc__spi.html#ga7c36403b14b7179856d1d960d0396db8" title="Set SPI communication speed. " alt="" coords="390,5,517,32"/>
+<area shape="rect" id="node4" href="$group__bc__spi.html#ga413301413b99ec784eb724008235a1b8" title="Set SPI mode of operation. " alt="" coords="391,56,515,83"/>
+</map>

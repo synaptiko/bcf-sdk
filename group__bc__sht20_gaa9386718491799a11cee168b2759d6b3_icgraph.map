@@ -1,0 +1,9 @@
+<map id="bc_sht20_measure" name="bc_sht20_measure">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#ga519b949e008cb2b0693921e5e189f88c" title="Start measurement of all sensors manually. " alt="" coords="187,5,378,46"/>
+<area shape="rect" id="node3" href="$group__bc__module__climate.html#gacbf2a99d86cb50597fb82f57af0d4b4b" title="Start hygrometer measurement manually. " alt="" coords="187,70,378,111"/>
+<area shape="rect" id="node4" href="$group__bc__sht20.html#ga24e0c92dae36a02052180a2ee527c743" title="Set measurement interval. " alt="" coords="209,135,356,177"/>
+<area shape="rect" id="node8" href="$group__bc__tag__humidity.html#gae7552f9c868715b23444a97a3ab089b6" title="Start measurement manually. " alt="" coords="195,201,370,228"/>
+<area shape="rect" id="node5" href="$group__bc__module__climate.html#gacbc9b29ec0f48a866775f6c3c5469c9a" title="Set measurement interval for all sensors. " alt="" coords="442,56,601,112"/>
+<area shape="rect" id="node6" href="$group__bc__module__climate.html#gadeae01284064a2e05b7d7c82ff40a5be" title="Set measurement interval for hygrometer. " alt="" coords="427,135,616,177"/>
+<area shape="rect" id="node7" href="$group__bc__tag__humidity.html#gadf6b5e8fea087785e8f54acc680e1e00" title="Set measurement interval. " alt="" coords="450,201,593,242"/>
+</map>

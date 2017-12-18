@@ -1,0 +1,4 @@
+<map id="bc_adc_async_read" name="bc_adc_async_read">
+<area shape="rect" id="node2" href="$group__bc__module__battery.html#ga172e2a7285fc525904fa9c5a77121018" title="Start mesurement. " alt="" coords="192,12,381,39"/>
+<area shape="rect" id="node3" href="$group__bc__module__battery.html#ga16a69bc3476362c1acc6b229f9beb966" title="Set update interval. " alt="" coords="429,5,587,46"/>
+</map>

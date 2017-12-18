@@ -1,0 +1,6 @@
+<map id="bc_i2c_set_speed" name="bc_i2c_set_speed">
+<area shape="rect" id="node2" href="$group__bc__ds28e17.html#ga5ac9b2a6c35ad5c8fe4ea27f182ef162" title="Set I2C speed. " alt="" coords="182,56,341,83"/>
+<area shape="rect" id="node3" href="$group__bc__onewire.html#ga00b9f05b4be593fd343a605716a56508" title="Reset the 1&#45;Wire bus and return the presence of any device. " alt="" coords="393,5,517,32"/>
+<area shape="rect" id="node4" href="$group__bc__onewire.html#gaeb2baea72df8586c92601488237bc99e" title="Select device. " alt="" coords="389,56,520,83"/>
+<area shape="rect" id="node5" href="$group__bc__onewire.html#ga4d0d2814df622e67fde9ca3de5e981f7" title="Select device. " alt="" coords="393,107,516,133"/>
+</map>

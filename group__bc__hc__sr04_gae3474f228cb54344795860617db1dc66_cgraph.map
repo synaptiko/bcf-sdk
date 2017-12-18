@@ -1,0 +1,6 @@
+<map id="bc_hc_sr04_set_update_interval" name="bc_hc_sr04_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="213,5,400,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="217,56,396,83"/>
+<area shape="rect" id="node4" href="$group__bc__hc__sr04.html#ga15c3d435fa7538a6ca4a043de1897ec7" title="Start measurement manually. " alt="" coords="233,107,380,133"/>
+<area shape="rect" id="node5" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="448,107,597,133"/>
+</map>

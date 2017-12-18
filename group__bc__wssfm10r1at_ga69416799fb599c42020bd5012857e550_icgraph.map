@@ -1,0 +1,11 @@
+<map id="bc_wssfm10r1at_is_ready" name="bc_wssfm10r1at_is_ready">
+<area shape="rect" id="node2" href="$group__bc__module__sigfox.html#gae48d0c47c1f298945f2d920a771c4d19" title="Check if modem is ready for commands. " alt="" coords="271,5,415,46"/>
+<area shape="rect" id="node3" href="$group__bc__wssfm10r1at.html#gab8160b0b5849307bc42bb3b243ceca31" title="Generate continuous wave command. " alt="" coords="229,71,456,97"/>
+<area shape="rect" id="node5" href="$group__bc__wssfm10r1at.html#gad6a6e49b5c7e36e06599f2f05d3fe786" title="Read device ID command. " alt="" coords="267,122,418,163"/>
+<area shape="rect" id="node7" href="$group__bc__wssfm10r1at.html#gab3f0f3e28e58ec8ad4f48ab27d2621ad" title="Read device PAC command. " alt="" coords="267,187,418,229"/>
+<area shape="rect" id="node9" href="$group__bc__wssfm10r1at.html#ga0e8b81886d3958021cd94bcd81581ef2" title="Send RF frame command. " alt="" coords="266,253,419,294"/>
+<area shape="rect" id="node4" href="$group__bc__module__sigfox.html#gaff0d8da9c6ca148e951442d7ea6d0547" title="Generate continuous wave command. " alt="" coords="504,71,739,97"/>
+<area shape="rect" id="node6" href="$group__bc__module__sigfox.html#ga36f59af90b257db1807db53082b64215" title="Read device ID command. " alt="" coords="542,122,701,163"/>
+<area shape="rect" id="node8" href="$group__bc__module__sigfox.html#ga8698a6efc239cdfd004ccf29d1e68c50" title="Read device PAC command. " alt="" coords="542,187,701,229"/>
+<area shape="rect" id="node10" href="$group__bc__module__sigfox.html#gaff30d9b95f4292f5bf26c0ba02f37160" title="Send RF frame command. " alt="" coords="540,253,703,294"/>
+</map>

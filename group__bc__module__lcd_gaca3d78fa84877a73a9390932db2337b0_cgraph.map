@@ -1,0 +1,10 @@
+<map id="bc_module_lcd_update" name="bc_module_lcd_update">
+<area shape="rect" id="node2" href="$group__bc__spi.html#gaba1376313ef221c25e4e66a2b496213a" title="Check if is ready for transfer. " alt="" coords="239,5,355,32"/>
+<area shape="rect" id="node3" href="$group__bc__tca9534a.html#ga2d29bd741393dcbb0b11a1f76d60371d" title="Write pin state. " alt="" coords="220,56,375,83"/>
+<area shape="rect" id="node8" href="$group__bc__spi.html#ga1b1ac7e6c4d8aafe0c5cdd72effcd95f" title="Execute async SPI transfer. " alt="" coords="221,107,374,133"/>
+<area shape="rect" id="node9" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="208,157,387,184"/>
+<area shape="rect" id="node4" href="$group__bc__tca9534a.html#ga4707e216045466f49d56e2fe58f9ec04" title="Write state to all pins. " alt="" coords="435,56,595,83"/>
+<area shape="rect" id="node5" href="$group__bc__i2c.html#ga313a279d51a755361b0d57eea6bcc226" title="Memory write 1 byte to I2C channel. " alt="" coords="643,56,813,83"/>
+<area shape="rect" id="node6" href="$group__bc__i2c.html#ga09c340b2ac57f2c8ed358dab05cf9c0b" title="Memory write to I2C channel. " alt="" coords="861,56,1011,83"/>
+<area shape="rect" id="node7" href="$group__bc__ds28e17.html#gae1baafe53feb279c3556a122782431ec" title="Memory write to I2C. " alt="" coords="1059,56,1240,83"/>
+</map>

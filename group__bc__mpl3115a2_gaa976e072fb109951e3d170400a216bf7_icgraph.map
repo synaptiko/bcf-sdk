@@ -1,0 +1,5 @@
+<map id="bc_mpl3115a2_set_update_interval" name="bc_mpl3115a2_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#gacbc9b29ec0f48a866775f6c3c5469c9a" title="Set measurement interval for all sensors. " alt="" coords="245,5,403,61"/>
+<area shape="rect" id="node3" href="$group__bc__module__climate.html#gaa95b5a8f2cab1f762ef4c3e2fe81ddbf" title="Set measurement interval for barometer. " alt="" coords="233,85,415,126"/>
+<area shape="rect" id="node4" href="$group__bc__tag__barometer.html#ga4a21af19a5c181dce2c99f12b5430d08" title="Set measurement interval. " alt="" coords="249,150,399,191"/>
+</map>

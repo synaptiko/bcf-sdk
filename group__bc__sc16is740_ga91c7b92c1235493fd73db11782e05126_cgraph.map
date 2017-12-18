@@ -1,0 +1,5 @@
+<map id="bc_sc16is740_get_spaces_available" name="bc_sc16is740_get_spaces_available">
+<area shape="rect" id="node2" href="$group__bc__i2c.html#gaa1e6123c2b68672fb6c591d4c73d4e0d" title="Memory read 1 byte from I2C channel. " alt="" coords="230,12,397,39"/>
+<area shape="rect" id="node3" href="$group__bc__i2c.html#gac2f33729bf9c4751342a88bb917ee9fc" title="Memory read from I2C channel. " alt="" coords="445,12,592,39"/>
+<area shape="rect" id="node4" href="$group__bc__ds28e17.html#ga159050bb4986621d5d289433c987b5c0" title="Memory read from I2C. " alt="" coords="640,12,819,39"/>
+</map>

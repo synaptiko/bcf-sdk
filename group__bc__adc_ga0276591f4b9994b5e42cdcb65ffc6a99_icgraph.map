@@ -1,0 +1,5 @@
+<map id="bc_adc_get_result" name="bc_adc_get_result">
+<area shape="rect" id="node2" href="$group__bc__adc.html#gad1738af9c840693353933d33e184b3e3" title="Reads the ADC channel voltage. " alt="" coords="209,5,305,32"/>
+<area shape="rect" id="node4" href="$group__bc__analog__sensor.html#ga5629feaf9ebbe669f53325e40c7bb06b" title="Get measurement result. " alt="" coords="181,57,333,98"/>
+<area shape="rect" id="node3" href="$group__bc__module__battery.html#gaac097c765f9bccd2db427b403cffdfcc" title="Initialize Battery Module. " alt="" coords="382,5,538,32"/>
+</map>

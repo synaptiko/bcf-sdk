@@ -1,0 +1,4 @@
+<map id="bc_i2c_memory_read_16b" name="bc_i2c_memory_read_16b">
+<area shape="rect" id="node2" href="$group__bc__i2c.html#gac2f33729bf9c4751342a88bb917ee9fc" title="Memory read from I2C channel. " alt="" coords="229,5,376,32"/>
+<area shape="rect" id="node3" href="$group__bc__ds28e17.html#ga159050bb4986621d5d289433c987b5c0" title="Memory read from I2C. " alt="" coords="424,5,603,32"/>
+</map>

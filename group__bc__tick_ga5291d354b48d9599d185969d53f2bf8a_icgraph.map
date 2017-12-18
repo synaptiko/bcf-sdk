@@ -1,0 +1,12 @@
+<map id="bc_tick_get" name="bc_tick_get">
+<area shape="rect" id="node2" href="$group__bc__led.html#ga70430d42b18f282381a8c8044c8adf94" title="Turn on LED for the specified duration of time. " alt="" coords="407,173,505,200"/>
+<area shape="rect" id="node3" href="$group__bc__lp8.html#ga3797534f427d59e7d71e3254040a8a4a" title="Initialize LP8. " alt="" coords="199,5,283,32"/>
+<area shape="rect" id="node5" href="$group__bc__module__lcd.html#ga4deacf537bee78c3c4ccb234870e41df" title="Lcd draw image. " alt="" coords="169,107,313,149"/>
+<area shape="rect" id="node6" href="$group__bc__sc16is740.html#ga45fe46c3432936b825689b55bd1ec85b" title="Read. " alt="" coords="174,173,309,200"/>
+<area shape="rect" id="node7" href="$group__bc__scheduler.html#ga24585ae64ca01ac49b2cc62b4cb5c5de" title="Schedule current task to tick relative from now. " alt="" coords="153,225,330,266"/>
+<area shape="rect" id="node8" href="$group__bc__scheduler.html#gab7a3ab8db1e126e531bfa8ebb3439586" title="Schedule specified task to tick relative from now. " alt="" coords="144,291,339,317"/>
+<area shape="rect" id="node9" href="$group__bc__scheduler.html#gae127d7da60ea52a5801bafc4e987cfa1" title="Run task scheduler (this call never ends) " alt="" coords="179,341,303,368"/>
+<area shape="rect" id="node10" href="$group__bc__spirit.html#ga18bd2ba84c0f7a735638d8aa01141cff" title="Set TX timeout. " alt="" coords="156,392,327,419"/>
+<area shape="rect" id="node11" href="$group__bc__uart.html#ga4256fe65e122609345ab0702924ad5a9" title="Read data from UART channel (blocking call) " alt="" coords="193,443,290,469"/>
+<area shape="rect" id="node4" href="$group__bc__module__co2.html#gadb0e38dec23d91719b530590ea08cf49" title="Initialize BigClown CO2 Module. " alt="" coords="387,5,525,32"/>
+</map>

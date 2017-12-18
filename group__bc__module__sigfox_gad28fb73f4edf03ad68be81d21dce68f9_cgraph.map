@@ -1,0 +1,3 @@
+<map id="bc_module_sigfox_get_device_id" name="bc_module_sigfox_get_device_id">
+<area shape="rect" id="node2" href="$group__bc__wssfm10r1at.html#ga2387640ac753db505682f10f2ec1621b" title="Get device ID (can be called only in BC_WSSFM10R1AT_EVENT_READ_DEVICE_ID event) " alt="" coords="206,5,349,46"/>
+</map>

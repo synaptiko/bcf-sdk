@@ -1,0 +1,5 @@
+<map id="bc_tca9534a_write_pin" name="bc_tca9534a_write_pin">
+<area shape="rect" id="node2" href="$group__bc__module__lcd.html#gae10ca89dd6fbf30994a1a25ce1964e9d" title="Lcd off. " alt="" coords="220,5,351,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__lcd.html#gaf43b1a0418d6166b3431ab23361f5803" title="Lcd on. " alt="" coords="220,56,351,83"/>
+<area shape="rect" id="node4" href="$group__bc__module__lcd.html#gaca3d78fa84877a73a9390932db2337b0" title="Lcd update, send data. " alt="" coords="208,107,363,133"/>
+</map>

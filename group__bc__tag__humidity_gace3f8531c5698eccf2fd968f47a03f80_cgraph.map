@@ -1,0 +1,5 @@
+<map id="bc_tag_humidity_get_temperature_raw" name="bc_tag_humidity_get_temperature_raw">
+<area shape="rect" id="node2" href="$group__bc__hdc2080.html#gac7a2724757eb7f71d7ba32dc180980f1" title="Get measured temperature as raw value. " alt="" coords="197,5,419,32"/>
+<area shape="rect" id="node3" href="$group__bc__sht20.html#ga82b94b40563f0beaf2dc13b939abd93e" title="Get measured temperature as raw value. " alt="" coords="206,56,410,83"/>
+<area shape="rect" id="node4" href="$group__bc__sht30.html#ga2cc5e3ffec206f1b84dc4d022ea3e89b" title="Get measured temperature as raw value. " alt="" coords="206,107,410,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_tag_lux_meter_measure" name="bc_tag_lux_meter_measure">
+<area shape="rect" id="node2" href="$group__bc__opt3001.html#ga1f1324d720205062e98fff2b118957d7" title="Start measurement manually. " alt="" coords="237,5,384,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="432,5,619,32"/>
+</map>

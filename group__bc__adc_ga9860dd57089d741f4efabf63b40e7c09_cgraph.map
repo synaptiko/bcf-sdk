@@ -1,0 +1,4 @@
+<map id="bc_adc_init" name="bc_adc_init">
+<area shape="rect" id="node2" href="$group__bc__adc.html#ga47b8f485152827bffbdf48337c744eb5" title="Set ADC result format. " alt="" coords="149,5,283,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="141,56,291,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_module_climate_measure_barometer" name="bc_module_climate_measure_barometer">
+<area shape="rect" id="node2" href="$group__bc__mpl3115a2.html#ga567ddfa6b0f91562a24068b943c2f014" title="Start measurement manually. " alt="" coords="245,12,408,39"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="456,12,643,39"/>
+</map>

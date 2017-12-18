@@ -1,0 +1,5 @@
+<map id="bc_tag_temperature_get_temperature_fahrenheit" name="bc_tag_temperature_get_temperature_fahrenheit">
+<area shape="rect" id="node2" href="$group__bc__tmp112.html#gab9f11bac41821cc261fb7d3cf58e0efb" title="Get measured temperature in degrees of Fahrenheit. " alt="" coords="240,5,427,46"/>
+<area shape="rect" id="node3" href="$group__bc__tmp112.html#ga9d591221cfb0cbb55e5104ffd20ff0ec" title="Get measured temperature in degrees of Celsius. " alt="" coords="475,5,661,46"/>
+<area shape="rect" id="node4" href="$group__bc__tmp112.html#ga93c96309f01b036202ba1694f545fd2f" title="Get measured temperature as raw value. " alt="" coords="710,12,925,39"/>
+</map>

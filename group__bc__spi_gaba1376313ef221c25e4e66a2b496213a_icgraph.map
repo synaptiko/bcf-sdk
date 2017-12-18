@@ -1,0 +1,4 @@
+<map id="bc_spi_is_ready" name="bc_spi_is_ready">
+<area shape="rect" id="node2" href="$group__bc__module__lcd.html#ga3721442ce76ca18b21277ead0ccec798" title="Check if lcd is ready for commands. " alt="" coords="171,5,336,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__lcd.html#gaca3d78fa84877a73a9390932db2337b0" title="Lcd update, send data. " alt="" coords="176,56,331,83"/>
+</map>

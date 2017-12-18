@@ -1,0 +1,4 @@
+<map id="bc_sht20_get_humidity_percentage" name="bc_sht20_get_humidity_percentage">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#gabd7560f97e3a9b8a46561443dd866821" title="Get measured humidity as percentage. " alt="" coords="211,5,370,46"/>
+<area shape="rect" id="node3" href="$group__bc__tag__humidity.html#gad7f456d59973cda64de2e155f321e4db" title="Get measured humidity as percentage. " alt="" coords="216,70,365,111"/>
+</map>

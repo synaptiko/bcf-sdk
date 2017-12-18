@@ -1,0 +1,4 @@
+<map id="bc_sht20_init" name="bc_sht20_init">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#gaeaa8aa7003f49a1741380c2cdd07e322" title="Initialize BigClown Climate Module. " alt="" coords="153,5,311,32"/>
+<area shape="rect" id="node3" href="$group__bc__tag__humidity.html#ga36ae45e289b8a7d6106089665910d57d" title="Initialize BigClown Humidity Tag. " alt="" coords="161,56,303,83"/>
+</map>

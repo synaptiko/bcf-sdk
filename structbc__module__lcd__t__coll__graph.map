@@ -1,0 +1,6 @@
+<map id="bc_module_lcd_t" name="bc_module_lcd_t">
+<area shape="rect" id="node2" href="$structbc__tca9534a__t.html" title="Pin state. " alt="" coords="5,187,112,213"/>
+<area shape="rect" id="node3" href="$structbc__font__t.html" title="bc_font_t" alt="" coords="137,187,212,213"/>
+<area shape="rect" id="node4" href="$structbc__font__char__t.html" title="bc_font_char_t" alt="" coords="121,96,228,123"/>
+<area shape="rect" id="node5" href="$structbc__font__image__t.html" title="bc_font_image_t" alt="" coords="115,5,233,32"/>
+</map>

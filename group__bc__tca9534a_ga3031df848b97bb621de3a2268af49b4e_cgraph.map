@@ -1,0 +1,5 @@
+<map id="bc_tca9534a_set_port_direction" name="bc_tca9534a_set_port_direction">
+<area shape="rect" id="node2" href="$group__bc__i2c.html#ga313a279d51a755361b0d57eea6bcc226" title="Memory write 1 byte to I2C channel. " alt="" coords="205,12,376,39"/>
+<area shape="rect" id="node3" href="$group__bc__i2c.html#ga09c340b2ac57f2c8ed358dab05cf9c0b" title="Memory write to I2C channel. " alt="" coords="424,12,573,39"/>
+<area shape="rect" id="node4" href="$group__bc__ds28e17.html#gae1baafe53feb279c3556a122782431ec" title="Memory write to I2C. " alt="" coords="621,12,803,39"/>
+</map>

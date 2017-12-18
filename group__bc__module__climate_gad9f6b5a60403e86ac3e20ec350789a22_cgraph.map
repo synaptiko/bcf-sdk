@@ -1,0 +1,6 @@
+<map id="bc_module_climate_set_update_interval_thermometer" name="bc_module_climate_set_update_interval_thermometer">
+<area shape="rect" id="node2" href="$group__bc__tmp112.html#gaab18b8b8625b2d4d4272f4c0b6666153" title="Set measurement interval. " alt="" coords="251,16,408,57"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="683,23,869,50"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="456,23,635,50"/>
+<area shape="rect" id="node5" href="$group__bc__tmp112.html#ga80fd7dd719e8fd97dcb84d846a4b7249" title="Start measurement manually. " alt="" coords="474,74,617,100"/>
+</map>

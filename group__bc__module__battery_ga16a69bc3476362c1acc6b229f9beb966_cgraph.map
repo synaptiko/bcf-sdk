@@ -1,0 +1,8 @@
+<map id="bc_module_battery_set_update_interval" name="bc_module_battery_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="212,5,399,32"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="216,56,395,83"/>
+<area shape="rect" id="node4" href="$group__bc__module__battery.html#ga172e2a7285fc525904fa9c5a77121018" title="Start mesurement. " alt="" coords="211,107,400,133"/>
+<area shape="rect" id="node5" href="$group__bc__adc.html#ga04e9a88834ca5798ce7c5719f223f905" title="Begins reading the ADC channel voltage in asynchronous mode. " alt="" coords="448,107,587,133"/>
+<area shape="rect" id="node6" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="635,81,741,108"/>
+<area shape="rect" id="node7" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="637,132,739,159"/>
+</map>

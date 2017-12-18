@@ -1,0 +1,8 @@
+<map id="bc_module_sensor_get_pull" name="bc_module_sensor_get_pull">
+<area shape="rect" id="node2" href="$group__bc__tca9534a.html#gabcdc7715028dfbc384749a818d3bbe5d" title="Read pin state. " alt="" coords="237,5,389,32"/>
+<area shape="rect" id="node7" href="$group__bc__gpio.html#ga03e0144f0e202d18adb63f7e5c0a2b61" title="Get pull&#45;up/pull&#45;down configuration for GPIO channel. " alt="" coords="254,56,373,83"/>
+<area shape="rect" id="node3" href="$group__bc__tca9534a.html#gafae0e31f827bddb3e47958a3656ea32b" title="Read state of all pins. " alt="" coords="437,5,595,32"/>
+<area shape="rect" id="node4" href="$group__bc__i2c.html#gaa1e6123c2b68672fb6c591d4c73d4e0d" title="Memory read 1 byte from I2C channel. " alt="" coords="643,5,810,32"/>
+<area shape="rect" id="node5" href="$group__bc__i2c.html#gac2f33729bf9c4751342a88bb917ee9fc" title="Memory read from I2C channel. " alt="" coords="859,5,1005,32"/>
+<area shape="rect" id="node6" href="$group__bc__ds28e17.html#ga159050bb4986621d5d289433c987b5c0" title="Memory read from I2C. " alt="" coords="1053,5,1232,32"/>
+</map>

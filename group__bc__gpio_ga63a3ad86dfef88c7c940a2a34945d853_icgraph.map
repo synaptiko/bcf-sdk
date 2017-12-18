@@ -1,0 +1,12 @@
+<map id="bc_gpio_set_mode" name="bc_gpio_set_mode">
+<area shape="rect" id="node2" href="$group__bc__button.html#ga9d8e7624ae6eb9bbd71cd4116e95c4e3" title="Initialize button. " alt="" coords="230,5,333,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__encoder.html#ga6f67406dd1e0db504050b19437779001" title="Initialize Encoder Module. " alt="" coords="427,31,589,57"/>
+<area shape="rect" id="node4" href="$group__bc__led.html#ga37676d859fb868955637b802affbb312" title="Initialize LED. " alt="" coords="239,107,323,133"/>
+<area shape="rect" id="node5" href="$group__bc__module__battery.html#gaac097c765f9bccd2db427b403cffdfcc" title="Initialize Battery Module. " alt="" coords="203,157,359,184"/>
+<area shape="rect" id="node6" href="$group__bc__module__power.html#gadf23b21469581c6a756091a60895aa82" title="Initialize power module. " alt="" coords="206,208,357,235"/>
+<area shape="rect" id="node7" href="$group__bc__module__sensor.html#ga939d34dd217467d12958757433341b6e" title="Set output mode of Sensor Module channel. " alt="" coords="184,259,379,285"/>
+<area shape="rect" id="node9" href="$group__bc__td1207r.html#ga1b5a8cc467f2285e7894a9397be094dc" title="Initialize TD1207R. " alt="" coords="226,309,337,336"/>
+<area shape="rect" id="node11" href="$group__bc__wssfm10r1at.html#ga59a1f344c6a04ca7feaed904f5e578aa" title="Initialize WSSFM10R1AT. " alt="" coords="210,360,353,387"/>
+<area shape="rect" id="node8" href="$group__bc__pulse__counter.html#ga6d78b1c52014b693c271c39d17516694" title="Initialize pulse counter. " alt="" coords="434,259,582,285"/>
+<area shape="rect" id="node10" href="$group__bc__module__sigfox.html#ga85ecac7b2744ca0180323c5448eafe0d" title="Initialize BigClown SigFox Module. " alt="" coords="433,335,583,361"/>
+</map>

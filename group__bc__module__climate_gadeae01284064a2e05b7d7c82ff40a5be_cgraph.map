@@ -1,0 +1,6 @@
+<map id="bc_module_climate_set_update_interval_hygrometer" name="bc_module_climate_set_update_interval_hygrometer">
+<area shape="rect" id="node2" href="$group__bc__sht20.html#ga24e0c92dae36a02052180a2ee527c743" title="Set measurement interval. " alt="" coords="243,16,389,57"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="664,23,851,50"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga060b4fece6aff4a50c10f9f29416ee45" title="Schedule specified task to tick relative from current spin. " alt="" coords="437,23,616,50"/>
+<area shape="rect" id="node5" href="$group__bc__sht20.html#gaa9386718491799a11cee168b2759d6b3" title="Start measurement manually. " alt="" coords="461,74,593,101"/>
+</map>

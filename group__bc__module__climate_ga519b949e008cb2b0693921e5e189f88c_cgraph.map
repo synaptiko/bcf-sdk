@@ -1,0 +1,7 @@
+<map id="bc_module_climate_measure_all_sensors" name="bc_module_climate_measure_all_sensors">
+<area shape="rect" id="node2" href="$group__bc__tmp112.html#ga80fd7dd719e8fd97dcb84d846a4b7249" title="Start measurement manually. " alt="" coords="255,5,398,32"/>
+<area shape="rect" id="node4" href="$group__bc__sht20.html#gaa9386718491799a11cee168b2759d6b3" title="Start measurement manually. " alt="" coords="261,56,393,83"/>
+<area shape="rect" id="node5" href="$group__bc__opt3001.html#ga1f1324d720205062e98fff2b118957d7" title="Start measurement manually. " alt="" coords="253,107,400,133"/>
+<area shape="rect" id="node6" href="$group__bc__mpl3115a2.html#ga567ddfa6b0f91562a24068b943c2f014" title="Start measurement manually. " alt="" coords="245,157,408,184"/>
+<area shape="rect" id="node3" href="$group__bc__scheduler.html#gade94244616617574eee859c0fb5df428" title="Schedule specified task to absolute tick. " alt="" coords="456,81,643,108"/>
+</map>

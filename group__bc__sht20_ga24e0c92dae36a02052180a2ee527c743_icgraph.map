@@ -1,0 +1,5 @@
+<map id="bc_sht20_set_update_interval" name="bc_sht20_set_update_interval">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#gacbc9b29ec0f48a866775f6c3c5469c9a" title="Set measurement interval for all sensors. " alt="" coords="215,5,374,61"/>
+<area shape="rect" id="node3" href="$group__bc__module__climate.html#gadeae01284064a2e05b7d7c82ff40a5be" title="Set measurement interval for hygrometer. " alt="" coords="200,85,389,126"/>
+<area shape="rect" id="node4" href="$group__bc__tag__humidity.html#gadf6b5e8fea087785e8f54acc680e1e00" title="Set measurement interval. " alt="" coords="223,150,366,191"/>
+</map>

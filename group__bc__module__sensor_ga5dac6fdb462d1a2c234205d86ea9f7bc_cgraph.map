@@ -1,0 +1,5 @@
+<map id="bc_module_sensor_toggle_output" name="bc_module_sensor_toggle_output">
+<area shape="rect" id="node2" href="$group__bc__gpio.html#gac3726d1184678159614d9c5296579534" title="Toggle output state for GPIO channel. " alt="" coords="227,31,379,57"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="427,5,533,32"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="429,56,531,83"/>
+</map>

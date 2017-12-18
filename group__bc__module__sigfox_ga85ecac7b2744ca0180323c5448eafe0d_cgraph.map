@@ -1,0 +1,16 @@
+<map id="bc_module_sigfox_init" name="bc_module_sigfox_init">
+<area shape="rect" id="node2" href="$group__bc__td1207r.html#ga1b5a8cc467f2285e7894a9397be094dc" title="Initialize TD1207R. " alt="" coords="226,199,337,225"/>
+<area shape="rect" id="node13" href="$group__bc__td1207r.html#gaaf681c7ad291a19a5b27dab9bc45c7c2" title="Set callback function. " alt="" coords="206,301,357,342"/>
+<area shape="rect" id="node14" href="$group__bc__wssfm10r1at.html#ga59a1f344c6a04ca7feaed904f5e578aa" title="Initialize WSSFM10R1AT. " alt="" coords="210,249,353,276"/>
+<area shape="rect" id="node15" href="$group__bc__wssfm10r1at.html#ga7a773ed0038cca441e0247dacb93343b" title="Set callback function. " alt="" coords="210,366,353,407"/>
+<area shape="rect" id="node3" href="$group__bc__gpio.html#ga06db16c5cd7f6ffff7e297970814221d" title="Initialize GPIO channel. " alt="" coords="439,56,529,83"/>
+<area shape="rect" id="node6" href="$group__bc__gpio.html#ga1a15056524308ed212dada9d80bbfd81" title="Set output state for GPIO channel. " alt="" coords="417,224,551,251"/>
+<area shape="rect" id="node7" href="$group__bc__gpio.html#ga63a3ad86dfef88c7c940a2a34945d853" title="Set mode of operation for GPIO channel. " alt="" coords="419,5,549,32"/>
+<area shape="rect" id="node8" href="$group__bc__fifo.html#gaa7eed98919b150b8452698e5bc31ba1d" title="Initialize FIFO buffer. " alt="" coords="441,275,527,301"/>
+<area shape="rect" id="node9" href="$group__bc__uart.html#gad397ffa074ff6fbd2444a27f369d2edf" title="Initialize UART channel. " alt="" coords="439,325,529,352"/>
+<area shape="rect" id="node10" href="$group__bc__uart.html#ga217ff05c1d596ad391017431ac17d867" title="Set buffers for async transfers. " alt="" coords="405,376,563,403"/>
+<area shape="rect" id="node11" href="$group__bc__uart.html#gaec23440802e3ec4d409f9c28b041b3f2" title="Start async reading. " alt="" coords="415,107,553,149"/>
+<area shape="rect" id="node12" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="611,173,760,200"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="633,31,738,57"/>
+<area shape="rect" id="node5" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="634,81,737,108"/>
+</map>

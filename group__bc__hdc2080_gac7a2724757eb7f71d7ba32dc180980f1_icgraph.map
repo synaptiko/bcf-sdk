@@ -1,0 +1,5 @@
+<map id="bc_hdc2080_get_temperature_raw" name="bc_hdc2080_get_temperature_raw">
+<area shape="rect" id="node2" href="$group__bc__hdc2080.html#gadef31a009ffac2133b9e0471865664af" title="Get measured temperature in degrees of Celsius. " alt="" coords="275,5,469,46"/>
+<area shape="rect" id="node4" href="$group__bc__tag__humidity.html#gace3f8531c5698eccf2fd968f47a03f80" title="Get measured temperature as raw value. " alt="" coords="301,70,443,111"/>
+<area shape="rect" id="node3" href="$group__bc__tag__humidity.html#gaf3e435e1ee18730eebc3b2a2dd699922" title="Get measured temperature in degrees of Celsius. " alt="" coords="517,5,664,46"/>
+</map>

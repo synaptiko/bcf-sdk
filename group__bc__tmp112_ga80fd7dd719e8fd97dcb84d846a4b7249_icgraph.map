@@ -1,0 +1,9 @@
+<map id="bc_tmp112_measure" name="bc_tmp112_measure">
+<area shape="rect" id="node2" href="$group__bc__module__climate.html#ga519b949e008cb2b0693921e5e189f88c" title="Start measurement of all sensors manually. " alt="" coords="198,5,389,46"/>
+<area shape="rect" id="node3" href="$group__bc__module__climate.html#ga0628e1ff9de7501ad2b0d9f32f2387fd" title="Start thermometer measurement manually. " alt="" coords="198,70,389,111"/>
+<area shape="rect" id="node4" href="$group__bc__tag__temperature.html#gae0a5c1b81710e7ec579ad86b3cd1db2a" title="Start measurement manually. " alt="" coords="225,135,362,177"/>
+<area shape="rect" id="node5" href="$group__bc__tmp112.html#gaab18b8b8625b2d4d4272f4c0b6666153" title="Set measurement interval. " alt="" coords="215,201,372,242"/>
+<area shape="rect" id="node6" href="$group__bc__module__climate.html#gacbc9b29ec0f48a866775f6c3c5469c9a" title="Set measurement interval for all sensors. " alt="" coords="457,121,615,177"/>
+<area shape="rect" id="node7" href="$group__bc__module__climate.html#gad9f6b5a60403e86ac3e20ec350789a22" title="Set measurement interval for thermometer. " alt="" coords="437,201,635,242"/>
+<area shape="rect" id="node8" href="$group__bc__tag__temperature.html#ga4be4786f6804ac04a6b6519fac9328f0" title="Set measurement interval. " alt="" coords="465,266,607,307"/>
+</map>

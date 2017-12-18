@@ -1,0 +1,7 @@
+<map id="bc_module_lcd_on" name="bc_module_lcd_on">
+<area shape="rect" id="node2" href="$group__bc__tca9534a.html#ga2d29bd741393dcbb0b11a1f76d60371d" title="Write pin state. " alt="" coords="184,5,339,32"/>
+<area shape="rect" id="node3" href="$group__bc__tca9534a.html#ga4707e216045466f49d56e2fe58f9ec04" title="Write state to all pins. " alt="" coords="387,5,547,32"/>
+<area shape="rect" id="node4" href="$group__bc__i2c.html#ga313a279d51a755361b0d57eea6bcc226" title="Memory write 1 byte to I2C channel. " alt="" coords="595,5,765,32"/>
+<area shape="rect" id="node5" href="$group__bc__i2c.html#ga09c340b2ac57f2c8ed358dab05cf9c0b" title="Memory write to I2C channel. " alt="" coords="813,5,963,32"/>
+<area shape="rect" id="node6" href="$group__bc__ds28e17.html#gae1baafe53feb279c3556a122782431ec" title="Memory write to I2C. " alt="" coords="1011,5,1192,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="bc_tca9534a_read_port" name="bc_tca9534a_read_port">
+<area shape="rect" id="node2" href="$group__bc__tca9534a.html#gabcdc7715028dfbc384749a818d3bbe5d" title="Read pin state. " alt="" coords="211,5,363,32"/>
+<area shape="rect" id="node3" href="$group__bc__module__sensor.html#ga79ad9d4e650bf7b2caf62bda713fddc9" title="Get pull&#45;up/pull&#45;down configuration for Sensor Module channel. " alt="" coords="411,5,594,32"/>
+</map>

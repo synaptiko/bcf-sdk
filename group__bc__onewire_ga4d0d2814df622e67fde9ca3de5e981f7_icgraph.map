@@ -1,0 +1,25 @@
+<map id="bc_onewire_write" name="bc_onewire_write">
+<area shape="rect" id="node2" href="$group__bc__ds28e17.html#ga5ac9b2a6c35ad5c8fe4ea27f182ef162" title="Set I2C speed. " alt="" coords="177,284,335,311"/>
+<area shape="rect" id="node24" href="$group__bc__onewire__relay.html#ga9c60cf29595c3e568ec978a13d6ab367" title="Set relay to specified state. " alt="" coords="182,335,330,377"/>
+<area shape="rect" id="node3" href="$group__bc__i2c.html#ga278d6844673b8460aecade7e4830b854" title="Set I2C channel speed. " alt="" coords="385,284,511,311"/>
+<area shape="rect" id="node4" href="$group__bc__i2c.html#ga8f29242288303f0328c6514068e516fa" title="Initialize I2C channel. " alt="" coords="561,284,645,311"/>
+<area shape="rect" id="node5" href="$group__bc__atsha204.html#gaf84d4883b887c51ac16f459167e04cd6" title="Initialize ATSHA204 driver. " alt="" coords="699,5,819,32"/>
+<area shape="rect" id="node7" href="$group__bc__hdc2080.html#gabac119de881d5c96af19f32f2f7927ce" title="Initialize HDC2080. " alt="" coords="701,56,817,83"/>
+<area shape="rect" id="node9" href="$group__bc__hts221.html#ga6fa1b3193fe2b98f5edf0066b9a4bc7a" title="Initialize HTS221. " alt="" coords="705,107,812,133"/>
+<area shape="rect" id="node10" href="$group__bc__lis2dh12.html#ga4e706e214a03b568e43b923931774160" title="Initialize LIS2DH12. " alt="" coords="701,411,816,437"/>
+<area shape="rect" id="node11" href="$group__bc__mpl3115a2.html#ga634445e187612f04ed034c3f95ef006e" title="Initialize MPL3115A2. " alt="" coords="693,259,824,285"/>
+<area shape="rect" id="node14" href="$group__bc__opt3001.html#ga3db4ea45d7c7b4cb5e63fda04802e1ba" title="Initialize OPT3001 driver. " alt="" coords="702,309,815,336"/>
+<area shape="rect" id="node16" href="$group__bc__sc16is740.html#ga088ffb060685d4af0025f5630891bf65" title="SC16IS740 instance. " alt="" coords="695,461,822,488"/>
+<area shape="rect" id="node17" href="$group__bc__sht20.html#gad12a0ad3e38bbb1ed81f0087180ac3af" title="Initialize SHT20. " alt="" coords="709,208,808,235"/>
+<area shape="rect" id="node18" href="$group__bc__sht30.html#ga1ba8cd4b03dd6de2fa5a78e7ded48e71" title="Initialize SHT30. " alt="" coords="709,157,808,184"/>
+<area shape="rect" id="node19" href="$group__bc__tca9534a.html#gab392a5644d1d4ccab47c95f04b4786cf" title="Initialize TCA9534A. " alt="" coords="699,512,819,539"/>
+<area shape="rect" id="node22" href="$group__bc__tmp112.html#gafa5c6541860450a84023c16293d977ac" title="Initialize TMP112. " alt="" coords="703,360,814,387"/>
+<area shape="rect" id="node6" href="$group__bc__radio.html#gaf172563996016b5b08ef24aefa870ab0" title="Initialize radio. " alt="" coords="906,5,1001,32"/>
+<area shape="rect" id="node8" href="$group__bc__tag__humidity.html#ga36ae45e289b8a7d6106089665910d57d" title="Initialize BigClown Humidity Tag. " alt="" coords="883,132,1024,159"/>
+<area shape="rect" id="node12" href="$group__bc__module__climate.html#gaeaa8aa7003f49a1741380c2cdd07e322" title="Initialize BigClown Climate Module. " alt="" coords="874,259,1033,285"/>
+<area shape="rect" id="node13" href="$group__bc__tag__barometer.html#ga9ae5b1f4d56c6d1f4e3e2acc3f0ed0d2" title="Initialize BigClown Barometer Tag. " alt="" coords="878,208,1029,235"/>
+<area shape="rect" id="node15" href="$group__bc__tag__lux__meter.html#ga0b3fdcc39e460870d8c98e0824002203" title="Initialize BigClown Lux Meter Tag. " alt="" coords="879,309,1028,336"/>
+<area shape="rect" id="node20" href="$group__bc__module__sensor.html#ga1079c2c19c21e89aa17cc1078737eb4e" title="Initialize Sensor Module. " alt="" coords="876,537,1031,564"/>
+<area shape="rect" id="node21" href="$group__bc__pulse__counter.html#ga6d78b1c52014b693c271c39d17516694" title="Initialize pulse counter. " alt="" coords="1083,537,1231,564"/>
+<area shape="rect" id="node23" href="$group__bc__tag__temperature.html#gad01d8bc1a7320cb8dbb0f1306d333783" title="Initialize BigClown Temperature Tag. " alt="" coords="873,360,1034,387"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="bc_module_sigfox_send_rf_frame" name="bc_module_sigfox_send_rf_frame">
+<area shape="rect" id="node2" href="$group__bc__td1207r.html#ga901747d090d799193a17dd46850c2d75" title="Send RF frame command. " alt="" coords="225,41,361,82"/>
+<area shape="rect" id="node5" href="$group__bc__wssfm10r1at.html#ga0e8b81886d3958021cd94bcd81581ef2" title="Send RF frame command. " alt="" coords="217,106,370,147"/>
+<area shape="rect" id="node3" href="$group__bc__td1207r.html#ga81a3b4a1c3f627e645148197fb9f3cad" title="Check if modem is ready for commands. " alt="" coords="435,5,578,32"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga46c874e6f1b363cf6851cfa8f837c398" title="Schedule specified task for immediate execution. " alt="" coords="426,56,587,83"/>
+<area shape="rect" id="node6" href="$group__bc__wssfm10r1at.html#ga69416799fb599c42020bd5012857e550" title="Check if modem is ready for commands. " alt="" coords="419,113,594,140"/>
+</map>

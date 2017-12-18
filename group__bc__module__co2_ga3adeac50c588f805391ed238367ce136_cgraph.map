@@ -1,0 +1,5 @@
+<map id="bc_module_co2_calibration" name="bc_module_co2_calibration">
+<area shape="rect" id="node2" href="$group__bc__lp8.html#gabeaaa8371190e2a79f45bb58190e26d0" title="Request sensor calibration. " alt="" coords="233,5,359,32"/>
+<area shape="rect" id="node3" href="$group__bc__lp8.html#ga1b3fc8217722df40006f4e7f3f23cd76" title="Start measurement manually. " alt="" coords="408,5,525,32"/>
+<area shape="rect" id="node4" href="$group__bc__scheduler.html#ga46c874e6f1b363cf6851cfa8f837c398" title="Schedule specified task for immediate execution. " alt="" coords="574,5,735,32"/>
+</map>

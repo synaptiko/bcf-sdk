@@ -1,0 +1,12 @@
+<map id="bc_wssfm10r1at_init" name="bc_wssfm10r1at_init">
+<area shape="rect" id="node2" href="$group__bc__gpio.html#ga06db16c5cd7f6ffff7e297970814221d" title="Initialize GPIO channel. " alt="" coords="231,5,321,32"/>
+<area shape="rect" id="node5" href="$group__bc__gpio.html#ga1a15056524308ed212dada9d80bbfd81" title="Set output state for GPIO channel. " alt="" coords="209,224,343,251"/>
+<area shape="rect" id="node6" href="$group__bc__gpio.html#ga63a3ad86dfef88c7c940a2a34945d853" title="Set mode of operation for GPIO channel. " alt="" coords="211,56,341,83"/>
+<area shape="rect" id="node7" href="$group__bc__fifo.html#gaa7eed98919b150b8452698e5bc31ba1d" title="Initialize FIFO buffer. " alt="" coords="233,275,319,301"/>
+<area shape="rect" id="node8" href="$group__bc__uart.html#gad397ffa074ff6fbd2444a27f369d2edf" title="Initialize UART channel. " alt="" coords="231,325,321,352"/>
+<area shape="rect" id="node9" href="$group__bc__uart.html#ga217ff05c1d596ad391017431ac17d867" title="Set buffers for async transfers. " alt="" coords="197,376,355,403"/>
+<area shape="rect" id="node10" href="$group__bc__uart.html#gaec23440802e3ec4d409f9c28b041b3f2" title="Start async reading. " alt="" coords="207,107,345,149"/>
+<area shape="rect" id="node11" href="$group__bc__scheduler.html#gac6e2fa9155567fb1f32a8b8b563e2f30" title="Register task in scheduler. " alt="" coords="403,140,552,167"/>
+<area shape="rect" id="node3" href="$group__bc__irq.html#ga83398e8b1c443f7bf1b1980959d3cc63" title="Disable interrupt requests globally (call can be nested) " alt="" coords="425,81,530,108"/>
+<area shape="rect" id="node4" href="$group__bc__irq.html#ga6bd1e6c1589c97558d14e8f3d648e656" title="Enable interrupt requests globally (call can be nested) " alt="" coords="426,31,529,57"/>
+</map>
